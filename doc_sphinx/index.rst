@@ -12,6 +12,8 @@ Nội dung
    :maxdepth: 2
    :caption: Mục lục
 
+   getting_started
+   huong_dan
    # Thêm các file .rst khác ở đây, ví dụ: huong-dan, api, ghi-chu
 
 Bắt đầu nhanh
