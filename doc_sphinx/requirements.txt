@@ -1,0 +1,4 @@
+sphinx>=7
+furo>=2024.8.6
+# Nếu muốn dùng Markdown:
+# myst-parser>=3
