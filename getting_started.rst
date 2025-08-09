@@ -7,7 +7,7 @@ Mục tiêu
 --------
 
 - Viết tài liệu bằng Sphinx
-- Deploy lên GitHub Pages
+- Deploy lên GitHub Pages 1
 
 Lệnh hữu ích
 ------------
