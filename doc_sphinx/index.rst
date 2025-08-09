@@ -10,11 +10,10 @@ Nội dung
 
 .. toctree::
    :maxdepth: 2
-   :caption: Mục lục
+   :caption: Nội dung
 
    getting_started
    huong_dan
-   # Thêm các file .rst khác ở đây, ví dụ: huong-dan, api, ghi-chu
 
 Bắt đầu nhanh
 -------------
