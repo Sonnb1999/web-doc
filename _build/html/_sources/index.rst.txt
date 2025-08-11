@@ -2,7 +2,7 @@
 
 Dự án TTIT AUM document
 
-=================
+=======================
 
 Chào mừng đến với tài liệu AUM!
 
@@ -10,22 +10,13 @@ Nội dung
 --------
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Nội dung
+   :maxdepth: 1
+   :caption: Sphinx
 
-   getting_started
-   huong_dan
-   build_doc_sphinx/build_sphinx
-   API/getting_started_with_API
+   sphinx/index
 
-Bắt đầu nhanh
--------------
+.. toctree::
+   :maxdepth: 1
+   :caption: API
 
-1. Cài đặt phụ thuộc trong ``requirements.txt``.
-2. Build local: ``sphinx-build -b html . _build/html``.
-3. Deploy lên GitHub Pages bằng workflow.
-
-Ghi chú
--------
-
-- Tích hợp theme `furo` để có giao diện đẹp.
+   API/index

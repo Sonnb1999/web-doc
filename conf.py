@@ -1,6 +1,6 @@
 # -- Project information -----------------------------------------------------
-project = "Tên dự án của bạn"
-author = "Tên tác giả"
+project = "Tài liệu kỹ thuật"
+author = "AUM Deverloper"
 copyright = "2025, " + author
 release = "1.0.0"
 

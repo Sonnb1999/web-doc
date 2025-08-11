@@ -1,21 +1,5 @@
-Cấu hình Sphinx từ A→Z
-======================
-
-Mục tiêu
---------
-Tài liệu này hướng dẫn cách:
-- Cài đặt Sphinx và theme
-- Tổ chức thư mục dự án
-- Cấu hình ``conf.py`` (extensions, theme, i18n, đường dẫn, build strict)
-- Viết mục lục với ``toctree``
-- Quản lý static assets
-- Build local và deploy GitHub Pages
-
-Yêu cầu
--------
-- Python 3.8+
-- ``pip`` mới
-- Quyền ghi vào thư mục dự án
+Cấu hình Sphinx
+===============
 
 Cài đặt nhanh
 -------------

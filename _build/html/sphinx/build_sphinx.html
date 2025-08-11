@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Tìm Kiếm" href="../search.html" /><link rel="next" title="Bắt đầu nhanh API" href="../API/getting_started_with_API.html" /><link rel="prev" title="Hướng dẫn chi tiết" href="../huong_dan.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Tìm Kiếm" href="../search.html" /><link rel="next" title="API document" href="../API/index.html" /><link rel="prev" title="Sphinx document" href="index.html" />
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.07.19 -->
-        <title>Cấu hình Sphinx từ A→Z - Tên dự án của bạn</title>
+        <title>Cấu hình Sphinx - Tài liệu kỹ thuật</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Tên dự án của bạn</div></a>
+      <a href="../index.html"><div class="brand">Tài liệu kỹ thuật</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -189,7 +189,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
-  <span class="sidebar-brand-text">Tên dự án của bạn</span>
+  <span class="sidebar-brand-text">Tài liệu kỹ thuật</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Tìm Kiếm" name="q" aria-label="Tìm Kiếm">
@@ -197,12 +197,23 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Nội dung</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Sphinx</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Bắt đầu nhanh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../huong_dan.html">Hướng dẫn chi tiết</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Cấu hình Sphinx từ A→Z</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../API/getting_started_with_API.html">Bắt đầu nhanh API</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Sphinx document</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Sphinx document</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Cấu hình Sphinx</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API/index.html">API document</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of API document</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../API/overview.html">Bắt đầu nhanh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/general_format.html">Định dạng API chung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/rule.html">Rule chi tiết</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/status_code.html">HTTP Status Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/oauth2.html">OAuth 2.0 – Lấy Token</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -223,7 +234,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/build_doc_sphinx/build_sphinx.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/sphinx/build_sphinx.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -243,26 +254,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="cau-hinh-sphinx-tu-az">
-<h1>Cấu hình Sphinx từ A→Z<a class="headerlink" href="#cau-hinh-sphinx-tu-az" title="Link to this heading">¶</a></h1>
-<section id="muc-tieu">
-<h2>Mục tiêu<a class="headerlink" href="#muc-tieu" title="Link to this heading">¶</a></h2>
-<p>Tài liệu này hướng dẫn cách:
-- Cài đặt Sphinx và theme
-- Tổ chức thư mục dự án
-- Cấu hình <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> (extensions, theme, i18n, đường dẫn, build strict)
-- Viết mục lục với <code class="docutils literal notranslate"><span class="pre">toctree</span></code>
-- Quản lý static assets
-- Build local và deploy GitHub Pages</p>
-</section>
-<section id="yeu-cau">
-<h2>Yêu cầu<a class="headerlink" href="#yeu-cau" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>Python 3.8+</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> mới</p></li>
-<li><p>Quyền ghi vào thư mục dự án</p></li>
-</ul>
-</section>
+          <section id="cau-hinh-sphinx">
+<h1>Cấu hình Sphinx<a class="headerlink" href="#cau-hinh-sphinx" title="Link to this heading">¶</a></h1>
 <section id="cai-dat-nhanh">
 <h2>Cài đặt nhanh<a class="headerlink" href="#cai-dat-nhanh" title="Link to this heading">¶</a></h2>
 <p>Tạo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>:</p>
@@ -508,23 +501,23 @@ Chào mừng đến với tài liệu <span class="ge">*Sphinx*</span>! Đây l�
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../API/getting_started_with_API.html">
+          <a class="next-page" href="../API/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Bắt đầu nhanh API</div>
+                <div class="title">API document</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../huong_dan.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Hướng dẫn chi tiết</div>
+                <div class="title">Sphinx document</div>
                 
               </div>
             </a>
@@ -532,7 +525,7 @@ Chào mừng đến với tài liệu <span class="ge">*Sphinx*</span>! Đây l�
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2025, Tên tác giả
+                Copyright &#169; 2025, AUM Deverloper
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -558,9 +551,7 @@ Chào mừng đến với tài liệu <span class="ge">*Sphinx*</span>! Đây l�
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Cấu hình Sphinx từ A→Z</a><ul>
-<li><a class="reference internal" href="#muc-tieu">Mục tiêu</a></li>
-<li><a class="reference internal" href="#yeu-cau">Yêu cầu</a></li>
+<li><a class="reference internal" href="#">Cấu hình Sphinx</a><ul>
 <li><a class="reference internal" href="#cai-dat-nhanh">Cài đặt nhanh</a></li>
 <li><a class="reference internal" href="#cau-truc-thu-muc-mau">Cấu trúc thư mục mẫu</a></li>
 <li><a class="reference internal" href="#cau-hinh-co-ban-trong-conf-py">Cấu hình cơ bản trong <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
