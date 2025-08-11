@@ -1,19 +1,22 @@
 .. Tài liệu Sphinx demo
 
-Tên dự án của bạn
+Dự án TTIT AUM document
+
 =================
 
-Chào mừng đến với tài liệu *Sphinx*! Đây là trang chủ.
+Chào mừng đến với tài liệu AUM!
 
 Nội dung
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Nội dung
 
    getting_started
    huong_dan
+   build_doc_sphinx/build_sphinx
+   API/getting_started_with_API
 
 Bắt đầu nhanh
 -------------
@@ -25,5 +28,4 @@ Bắt đầu nhanh
 Ghi chú
 -------
 
-- Bạn có thể viết **reStructuredText** hoặc bật **MyST** để dùng Markdown.
 - Tích hợp theme `furo` để có giao diện đẹp.

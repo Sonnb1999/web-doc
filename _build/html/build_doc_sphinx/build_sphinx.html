@@ -1,0 +1,594 @@
+<!doctype html>
+<html class="no-js" lang="vi" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Tìm Kiếm" href="../search.html" /><link rel="next" title="Bắt đầu nhanh API" href="../API/getting_started_with_API.html" /><link rel="prev" title="Hướng dẫn chi tiết" href="../huong_dan.html" />
+
+    <!-- Generated with Sphinx 8.1.3 and Furo 2025.07.19 -->
+        <title>Cấu hình Sphinx từ A→Z - Tên dự án của bạn</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Tên dự án của bạn</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <span class="sidebar-brand-text">Tên dự án của bạn</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Tìm Kiếm" name="q" aria-label="Tìm Kiếm">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Nội dung</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Bắt đầu nhanh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../huong_dan.html">Hướng dẫn chi tiết</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Cấu hình Sphinx từ A→Z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API/getting_started_with_API.html">Bắt đầu nhanh API</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/build_doc_sphinx/build_sphinx.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="cau-hinh-sphinx-tu-az">
+<h1>Cấu hình Sphinx từ A→Z<a class="headerlink" href="#cau-hinh-sphinx-tu-az" title="Link to this heading">¶</a></h1>
+<section id="muc-tieu">
+<h2>Mục tiêu<a class="headerlink" href="#muc-tieu" title="Link to this heading">¶</a></h2>
+<p>Tài liệu này hướng dẫn cách:
+- Cài đặt Sphinx và theme
+- Tổ chức thư mục dự án
+- Cấu hình <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> (extensions, theme, i18n, đường dẫn, build strict)
+- Viết mục lục với <code class="docutils literal notranslate"><span class="pre">toctree</span></code>
+- Quản lý static assets
+- Build local và deploy GitHub Pages</p>
+</section>
+<section id="yeu-cau">
+<h2>Yêu cầu<a class="headerlink" href="#yeu-cau" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Python 3.8+</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> mới</p></li>
+<li><p>Quyền ghi vào thư mục dự án</p></li>
+</ul>
+</section>
+<section id="cai-dat-nhanh">
+<h2>Cài đặt nhanh<a class="headerlink" href="#cai-dat-nhanh" title="Link to this heading">¶</a></h2>
+<p>Tạo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sphinx&gt;=7
+furo&gt;=2024.8.6
+# Bật Markdown nếu cần:
+# myst-parser&gt;=3
+</pre></div>
+</div>
+<p>Cài đặt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="cau-truc-thu-muc-mau">
+<h2>Cấu trúc thư mục mẫu<a class="headerlink" href="#cau-truc-thu-muc-mau" title="Link to this heading">¶</a></h2>
+<p>Đặt <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> ở thư mục <em>source root</em> (thư mục bạn sẽ build):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docs/
+├─ conf.py
+├─ index.rst
+├─ getting_started.rst
+├─ API/
+│  └─ getting_started_with_API.rst
+├─ _static/
+└─ requirements.txt
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Quan trọng</strong>: Các file được tham chiếu trong <code class="docutils literal notranslate"><span class="pre">toctree</span></code> phải nằm <em>bên trong</em> thư mục chứa <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> (hoặc thư mục con của nó).</p></li>
+</ul>
+</section>
+<section id="cau-hinh-co-ban-trong-conf-py">
+<h2>Cấu hình cơ bản trong <code class="docutils literal notranslate"><span class="pre">conf.py</span></code><a class="headerlink" href="#cau-hinh-co-ban-trong-conf-py" title="Link to this heading">¶</a></h2>
+<p>Ví dụ tối ưu, đơn giản và đủ dùng:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Project information -----------------------------------------------------</span>
+<span class="n">project</span> <span class="o">=</span> <span class="s2">&quot;Tên dự án của bạn&quot;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Tên tác giả&quot;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s2">&quot;1.0.0&quot;</span>
+<span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;vi&quot;</span>            <span class="c1"># en, vi, ...</span>
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sphinx.ext.napoleon&quot;</span><span class="p">,</span>   <span class="c1"># Google/NumPy docstrings</span>
+    <span class="s2">&quot;sphinx.ext.viewcode&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sphinx.ext.todo&quot;</span><span class="p">,</span>
+    <span class="c1"># &quot;myst_parser&quot;,         # Bật nếu dùng Markdown (.md)</span>
+<span class="p">]</span>
+
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_templates&quot;</span><span class="p">]</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_build&quot;</span><span class="p">,</span> <span class="s2">&quot;Thumbs.db&quot;</span><span class="p">,</span> <span class="s2">&quot;.DS_Store&quot;</span><span class="p">]</span>
+
+<span class="c1"># Nâng độ nghiêm ngặt khi build (bật khi CI/CD)</span>
+<span class="n">nitpicky</span> <span class="o">=</span> <span class="kc">False</span>           <span class="c1"># True: cảnh báo thiếu tham chiếu thành lỗi</span>
+<span class="n">todo_include_todos</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># hiện TODO trong tài liệu</span>
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;furo&quot;</span>        <span class="c1"># theme nhẹ, đẹp, không cần cấu hình nhiều</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_static&quot;</span><span class="p">]</span>
+<span class="n">html_title</span> <span class="o">=</span> <span class="n">project</span>
+<span class="n">html_baseurl</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>          <span class="c1"># (optional) để trống nếu dùng GitHub Pages</span>
+
+<span class="c1"># Nếu dùng Markdown (MyST)</span>
+<span class="c1"># myst_enable_extensions = [</span>
+<span class="c1">#     &quot;deflist&quot;, &quot;fieldlist&quot;, &quot;attrs_block&quot;, &quot;attrs_inline&quot;,</span>
+<span class="c1">#     &quot;linkify&quot;, &quot;substitution&quot;</span>
+<span class="c1"># ]</span>
+
+<span class="c1"># Đường dẫn module nếu dùng autodoc (tuỳ dự án)</span>
+<span class="c1"># import os, sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&quot;../src&quot;))</span>
+</pre></div>
+</div>
+</section>
+<section id="ghi-chu-ve-theme">
+<h2>Ghi chú về Theme<a class="headerlink" href="#ghi-chu-ve-theme" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">furo</span></code>: mặc định đẹp, dark/light mode, hầu như không cần tinh chỉnh.</p></li>
+<li><p>Thay theme: đổi <code class="docutils literal notranslate"><span class="pre">html_theme</span></code> sang <code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme</span></code> (cần cài thêm gói).</p></li>
+</ul>
+</section>
+<section id="quoc-te-hoa-i18n">
+<h2>Quốc tế hóa (i18n)<a class="headerlink" href="#quoc-te-hoa-i18n" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Đặt <code class="docutils literal notranslate"><span class="pre">language</span> <span class="pre">=</span> <span class="pre">&quot;vi&quot;</span></code> trong <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p></li>
+<li><p>Dịch chuỗi template Sphinx (search box, next/prev) sẽ tự áp dụng.</p></li>
+</ul>
+</section>
+<section id="viet-muc-luc-voi-toctree">
+<h2>Viết mục lục với <code class="docutils literal notranslate"><span class="pre">toctree</span></code><a class="headerlink" href="#viet-muc-luc-voi-toctree" title="Link to this heading">¶</a></h2>
+<p>Ví dụ <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Tên dự án của bạn</span>
+<span class="gh">=================</span>
+
+Chào mừng đến với tài liệu <span class="ge">*Sphinx*</span>! Đây là trang chủ.
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Nội dung
+
+   getting_started
+   API/getting_started_with_API
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Dòng trống <strong>sau</strong> <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code> là bắt buộc.</p></li>
+<li><p>Không thêm <code class="docutils literal notranslate"><span class="pre">.rst</span></code> ở cuối tên.</p></li>
+<li><p>Nếu dùng thư mục con, ghi <code class="docutils literal notranslate"><span class="pre">Folder/File</span></code> (không dấu cách).</p></li>
+</ul>
+</section>
+<section id="tu-dong-quet-tep-voi-glob">
+<h2>Tự động quét tệp với <code class="docutils literal notranslate"><span class="pre">:glob:</span></code><a class="headerlink" href="#tu-dong-quet-tep-voi-glob" title="Link to this heading">¶</a></h2>
+<p>Áp dụng khi có nhiều file và bạn không muốn liệt kê tay:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Nội dung
+   <span class="nc">:glob:</span>
+
+   getting_*
+   API/*
+</pre></div>
+</div>
+</section>
+<section id="static-assets-anh-css-js">
+<h2>Static assets (ảnh, CSS, JS)<a class="headerlink" href="#static-assets-anh-css-js" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>Đặt file tĩnh vào <code class="docutils literal notranslate"><span class="pre">_static/</span></code>.</p></li>
+<li><p>Tham chiếu ảnh trong <code class="docutils literal notranslate"><span class="pre">.rst</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> _static/diagram.png
+   <span class="nc">:alt:</span> Sơ đồ hệ thống
+   <span class="nc">:align:</span> center
+   <span class="nc">:width:</span> 600
+</pre></div>
+</div>
+</li>
+<li><p>Tuỳ biến CSS (optional): tạo <code class="docutils literal notranslate"><span class="pre">_static/custom.css</span></code> và thêm:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;custom.css&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="build-local">
+<h2>Build local<a class="headerlink" href="#build-local" title="Link to this heading">¶</a></h2>
+<p>Trong thư mục chứa <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>.<span class="w"> </span>_build/html
+<span class="c1"># Mở _build/html/index.html trong trình duyệt</span>
+</pre></div>
+</div>
+<p>Hoặc dùng Make (nếu có):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html<span class="w">          </span><span class="c1"># Linux/Mac</span>
+.<span class="se">\m</span>ake.bat<span class="w"> </span>html<span class="w">    </span><span class="c1"># Windows</span>
+</pre></div>
+</div>
+</section>
+<section id="trien-khai-github-pages-voi-github-actions">
+<h2>Triển khai GitHub Pages (với GitHub Actions)<a class="headerlink" href="#trien-khai-github-pages-voi-github-actions" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Settings → Pages → Source = GitHub Actions</strong></p></li>
+<li><p>Tạo <code class="docutils literal notranslate"><span class="pre">.github/workflows/gh-pages.yml</span></code>:</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build &amp; Deploy Sphinx to GitHub Pages</span>
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;main&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">  </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="nt">concurrency</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pages&quot;</span>
+<span class="w">  </span><span class="nt">cancel-in-progress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.x&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install deps</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">python -m pip install --upgrade pip</span>
+<span class="w">          </span><span class="no">pip install -r requirements.txt</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Sphinx</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">sphinx-build -b html . _build/html</span>
+<span class="w">          </span><span class="no">touch _build/html/.nojekyll</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload artifact</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-pages-artifact@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_build/html</span>
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-pages</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ steps.deployment.outputs.page_url }}</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deployment</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/deploy-pages@v4</span>
+</pre></div>
+</div>
+<p><strong>Lưu ý</strong>: Workflow <em>phải</em> nằm trong <code class="docutils literal notranslate"><span class="pre">.github/workflows/</span></code> (có dấu chấm).</p>
+</section>
+<section id="debug-loi-thuong-gap">
+<h2>Debug lỗi thường gặp<a class="headerlink" href="#debug-loi-thuong-gap" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">toctree</span> <span class="pre">contains</span> <span class="pre">reference</span> <span class="pre">to</span> <span class="pre">nonexisting</span> <span class="pre">document</span></code>
+→ Tên file/đường dẫn sai, hoặc file nằm ngoài source dir chứa <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html_static_path</span> <span class="pre">entry</span> <span class="pre">'_static'</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">exist</span></code>
+→ Tạo thư mục <code class="docutils literal notranslate"><span class="pre">_static/</span></code> hoặc bỏ dòng <code class="docutils literal notranslate"><span class="pre">html_static_path</span></code>.</p></li>
+<li><p>Pages hiển thị “trắng”:
+- Đảm bảo Pages dùng <strong>GitHub Actions</strong>, không phải Jekyll/branch.
+- Chỉ giữ <strong>1</strong> workflow deploy Sphinx.
+- Trong log build phải có <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> được upload artifact.
+- Refresh hard (Ctrl+F5) hoặc xem <strong>Environments → github-pages → View deployment</strong>.</p></li>
+<li><p>Windows build OK, Pages lỗi link:
+→ Tên file phân biệt HOA/thường trên Linux. Đồng bộ chính xác chữ hoa/thường.</p></li>
+</ul>
+</section>
+<section id="meo-nang-cao">
+<h2>Mẹo nâng cao<a class="headerlink" href="#meo-nang-cao" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Bật <strong>Markdown</strong> (MyST): cài <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> và thêm <code class="docutils literal notranslate"><span class="pre">&quot;myst_parser&quot;</span></code> vào <code class="docutils literal notranslate"><span class="pre">extensions</span></code>.</p></li>
+<li><p>Bật <strong>nitpicky = True</strong> trong CI để không bỏ sót tham chiếu.</p></li>
+<li><p>Tách tài liệu theo module: tạo <code class="docutils literal notranslate"><span class="pre">&lt;Module&gt;/index.rst</span></code> với toctree con, rồi include vào toctree gốc.</p></li>
+</ul>
+</section>
+<section id="ket-luan">
+<h2>Kết luận<a class="headerlink" href="#ket-luan" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Giữ tất cả nguồn (<code class="docutils literal notranslate"><span class="pre">.rst/.md</span></code>) <strong>bên trong</strong> thư mục có <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p></li>
+<li><p>Quản lý mục lục bằng <code class="docutils literal notranslate"><span class="pre">toctree</span></code> (đúng tên, đúng đường dẫn, có dòng trống).</p></li>
+<li><p>Dùng GitHub Actions để build &amp; deploy tự động từ <code class="docutils literal notranslate"><span class="pre">_build/html</span></code>.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../API/getting_started_with_API.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Bắt đầu nhanh API</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../huong_dan.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Hướng dẫn chi tiết</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Tên tác giả
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Cấu hình Sphinx từ A→Z</a><ul>
+<li><a class="reference internal" href="#muc-tieu">Mục tiêu</a></li>
+<li><a class="reference internal" href="#yeu-cau">Yêu cầu</a></li>
+<li><a class="reference internal" href="#cai-dat-nhanh">Cài đặt nhanh</a></li>
+<li><a class="reference internal" href="#cau-truc-thu-muc-mau">Cấu trúc thư mục mẫu</a></li>
+<li><a class="reference internal" href="#cau-hinh-co-ban-trong-conf-py">Cấu hình cơ bản trong <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
+<li><a class="reference internal" href="#ghi-chu-ve-theme">Ghi chú về Theme</a></li>
+<li><a class="reference internal" href="#quoc-te-hoa-i18n">Quốc tế hóa (i18n)</a></li>
+<li><a class="reference internal" href="#viet-muc-luc-voi-toctree">Viết mục lục với <code class="docutils literal notranslate"><span class="pre">toctree</span></code></a></li>
+<li><a class="reference internal" href="#tu-dong-quet-tep-voi-glob">Tự động quét tệp với <code class="docutils literal notranslate"><span class="pre">:glob:</span></code></a></li>
+<li><a class="reference internal" href="#static-assets-anh-css-js">Static assets (ảnh, CSS, JS)</a></li>
+<li><a class="reference internal" href="#build-local">Build local</a></li>
+<li><a class="reference internal" href="#trien-khai-github-pages-voi-github-actions">Triển khai GitHub Pages (với GitHub Actions)</a></li>
+<li><a class="reference internal" href="#debug-loi-thuong-gap">Debug lỗi thường gặp</a></li>
+<li><a class="reference internal" href="#meo-nang-cao">Mẹo nâng cao</a></li>
+<li><a class="reference internal" href="#ket-luan">Kết luận</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=07f74b9f"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/translations.js?v=4c1d55b0"></script>
+    </body>
+</html>

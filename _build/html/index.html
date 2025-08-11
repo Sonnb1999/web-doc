@@ -178,7 +178,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -201,6 +201,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Bắt đầu nhanh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="huong_dan.html">Hướng dẫn chi tiết</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html">Cấu hình Sphinx từ A→Z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="API/getting_started_with_API.html">Bắt đầu nhanh API</a></li>
 </ul>
 
 </div>
@@ -235,17 +237,17 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="ten-du-an-cua-ban">
-<h1>Tên dự án của bạn<a class="headerlink" href="#ten-du-an-cua-ban" title="Link to this heading">¶</a></h1>
-<p>Chào mừng đến với tài liệu <em>Sphinx</em>! Đây là trang chủ.</p>
+          <p>Dự án TTIT AUM document</p>
+<hr class="docutils" />
+<p>Chào mừng đến với tài liệu AUM!</p>
 <section id="noi-dung">
-<h2>Nội dung<a class="headerlink" href="#noi-dung" title="Link to this heading">¶</a></h2>
+<h1>Nội dung<a class="headerlink" href="#noi-dung" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Nội dung</span></p>
 <ul>
@@ -255,11 +257,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="huong_dan.html">Hướng dẫn chi tiết</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html">Cấu hình Sphinx từ A→Z</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#muc-tieu">Mục tiêu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#yeu-cau">Yêu cầu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#cai-dat-nhanh">Cài đặt nhanh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#cau-truc-thu-muc-mau">Cấu trúc thư mục mẫu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#cau-hinh-co-ban-trong-conf-py">Cấu hình cơ bản trong <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#ghi-chu-ve-theme">Ghi chú về Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#quoc-te-hoa-i18n">Quốc tế hóa (i18n)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#viet-muc-luc-voi-toctree">Viết mục lục với <code class="docutils literal notranslate"><span class="pre">toctree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#tu-dong-quet-tep-voi-glob">Tự động quét tệp với <code class="docutils literal notranslate"><span class="pre">:glob:</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#static-assets-anh-css-js">Static assets (ảnh, CSS, JS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#build-local">Build local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#trien-khai-github-pages-voi-github-actions">Triển khai GitHub Pages (với GitHub Actions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#debug-loi-thuong-gap">Debug lỗi thường gặp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#meo-nang-cao">Mẹo nâng cao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_doc_sphinx/build_sphinx.html#ket-luan">Kết luận</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/getting_started_with_API.html">Bắt đầu nhanh API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/getting_started_with_API.html#muc-tieu">Mục tiêu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API/getting_started_with_API.html#lenh-huu-ich">Lệnh hữu ích</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
 <section id="bat-dau-nhanh">
-<h2>Bắt đầu nhanh<a class="headerlink" href="#bat-dau-nhanh" title="Link to this heading">¶</a></h2>
+<h1>Bắt đầu nhanh<a class="headerlink" href="#bat-dau-nhanh" title="Link to this heading">¶</a></h1>
 <ol class="arabic simple">
 <li><p>Cài đặt phụ thuộc trong <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>.</p></li>
 <li><p>Build local: <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">.</span> <span class="pre">_build/html</span></code>.</p></li>
@@ -267,12 +292,10 @@
 </ol>
 </section>
 <section id="ghi-chu">
-<h2>Ghi chú<a class="headerlink" href="#ghi-chu" title="Link to this heading">¶</a></h2>
+<h1>Ghi chú<a class="headerlink" href="#ghi-chu" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Bạn có thể viết <strong>reStructuredText</strong> hoặc bật <strong>MyST</strong> để dùng Markdown.</p></li>
 <li><p>Tích hợp theme <cite>furo</cite> để có giao diện đẹp.</p></li>
 </ul>
-</section>
 </section>
 
         </article>
@@ -308,29 +331,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Tên dự án của bạn</a><ul>
-<li><a class="reference internal" href="#noi-dung">Nội dung</a></li>
-<li><a class="reference internal" href="#bat-dau-nhanh">Bắt đầu nhanh</a></li>
-<li><a class="reference internal" href="#ghi-chu">Ghi chú</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

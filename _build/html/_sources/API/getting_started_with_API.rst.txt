@@ -1,4 +1,4 @@
-Bắt đầu nhanh
+Bắt đầu nhanh API
 =============
 
 Đây là trang demo nội dung. Bạn có thể viết **reStructuredText** ở đây.
@@ -6,7 +6,7 @@ Bắt đầu nhanh
 Mục tiêu
 --------
 
-- Viết tài liệu bằng Sphinx
+- Viết tài liệu bằng Sphinx API b ơi
 - Deploy lên GitHub Pages 1
 
 Lệnh hữu ích
