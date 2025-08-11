@@ -1,12 +1,5 @@
-Bắt đầu nhanh
-=============
-
-Mục tiêu
---------
-- Tóm tắt phương thức HTTP sử dụng trong hệ thống.
-
 Phương thức HTTP
-----------------
+================
 
 - **GET**: Lấy dữ liệu từ server.
 - **POST**: Tạo mới dữ liệu.
