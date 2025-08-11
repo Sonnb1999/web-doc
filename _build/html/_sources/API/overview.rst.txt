@@ -1,16 +1,5 @@
-Bắt đầu nhanh
-=============
-
-Mục tiêu
---------
-- Tóm tắt phương thức HTTP sử dụng trong hệ thống.
-
-Lệnh hữu ích
-------------
-- ``sphinx-build -b html . _build/html`` để build.
-
 Phương thức HTTP
-----------------
+================
 
 - **GET**: Lấy dữ liệu từ server.
 - **POST**: Tạo mới dữ liệu.

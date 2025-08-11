@@ -128,14 +128,3 @@ Lỗi thường gặp
      "error": "invalid_client",
      "error_description": "Client credentials are invalid."
    }
-
-Cách sử dụng token
-------------------
-Khi gọi các API khác, thêm header:
-
-.. code-block:: http
-
-   GET /v1/resource HTTP/1.1
-   Host: example.com
-   Authorization: Bearer <access_token>
-

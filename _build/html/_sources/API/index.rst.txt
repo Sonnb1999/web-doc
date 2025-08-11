@@ -5,7 +5,7 @@ API document
    :maxdepth: 1
 
    overview
-   general_format
    rule
+   general_format
    status_code
    oauth2
