@@ -35,4 +35,4 @@ Thất bại:
      "code": 400
    }
 
-Context bổ sung có thể đặt trong trường ``data`` hoặc ``meta``.
+Context bổ sung có thể đặt trong trường ``context`` tương tự trường ``data``.
