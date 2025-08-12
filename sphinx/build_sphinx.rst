@@ -151,6 +151,8 @@ Trong thư mục chứa ``conf.py``:
 
    sphinx-build -b html . _build/html
    # Mở _build/html/index.html trong trình duyệt
+   # hoặc sử dụng lệnh
+   start _build/html/index.html
 
 Hoặc dùng Make (nếu có):
 
@@ -158,57 +160,6 @@ Hoặc dùng Make (nếu có):
 
    make html          # Linux/Mac
    .\make.bat html    # Windows
-
-Triển khai GitHub Pages (với GitHub Actions)
---------------------------------------------
-1) **Settings → Pages → Source = GitHub Actions**  
-2) Tạo ``.github/workflows/gh-pages.yml``:
-
-.. code-block:: yaml
-
-   name: Build & Deploy Sphinx to GitHub Pages
-   on:
-     push:
-       branches: ["main"]
-     workflow_dispatch:
-   permissions:
-     contents: read
-     pages: write
-     id-token: write
-   concurrency:
-     group: "pages"
-     cancel-in-progress: true
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v4
-         - uses: actions/setup-python@v5
-           with:
-             python-version: "3.x"
-         - name: Install deps
-           run: |
-             python -m pip install --upgrade pip
-             pip install -r requirements.txt
-         - name: Build Sphinx
-           run: |
-             sphinx-build -b html . _build/html
-             touch _build/html/.nojekyll
-         - name: Upload artifact
-           uses: actions/upload-pages-artifact@v3
-           with:
-             path: _build/html
-     deploy:
-       runs-on: ubuntu-latest
-       needs: build
-       environment:
-         name: github-pages
-         url: ${{ steps.deployment.outputs.page_url }}
-       steps:
-         - id: deployment
-           uses: actions/deploy-pages@v4
-
-**Lưu ý**: Workflow *phải* nằm trong ``.github/workflows/`` (có dấu chấm).
 
 Debug lỗi thường gặp
 --------------------

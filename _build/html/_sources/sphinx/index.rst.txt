@@ -31,3 +31,4 @@ Nội dung
    :maxdepth: 1
 
    build_sphinx
+   build_github_actions
