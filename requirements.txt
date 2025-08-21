@@ -1,4 +1,9 @@
-sphinx>=7
-furo>=2024.8.6
-# Nếu muốn dùng Markdown:
-# myst-parser>=3
+sphinx>=7.0
+sphinx-design>=0.6.0
+sphinx-copybutton>=0.5.2
+sphinxcontrib-mermaid>=0.9.2
+sphinx-tabs>=3.4.1
+sphinxcontrib-httpdomain>=1.8.1
+sphinx-autodoc-typehints>=2.2.1
+sphinx-rtd-theme>=2.0.0
+piccolo_theme>=0.21.0

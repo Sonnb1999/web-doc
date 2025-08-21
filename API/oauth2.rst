@@ -1,18 +1,18 @@
-OAuth 2.0 – Lấy Token
-=====================
+4. OAuth 2.0 – Lấy Token
+========================
 
-Tổng quan
----------
+4.1 Tổng quan
+-------------
 - **Grant type**: ``client_credentials`` (server-to-server).
 - **Token type**: ``Bearer``.
 - Sau khi nhận token, gửi kèm ở mọi API qua header: ``Authorization: Bearer <access_token>``.
 
-Endpoint
---------
+4.2 Endpoint
+------------
 - **POST** ``/v1/auth/token``  (ví dụ: ``http://localhost:8016/v1/auth/token``)
 
-Yêu cầu
--------
+4.3 Yêu cầu
+-----------
 **Headers**
 
 .. list-table::
@@ -55,8 +55,8 @@ Yêu cầu
      - M
      - string
 
-Ví dụ request (cURL)
---------------------
+4.4 Ví dụ request (cURL)
+------------------------
 .. code-block:: bash
 
    curl -X POST 'http://localhost:8016/v1/auth/token' \
@@ -69,8 +69,8 @@ Ví dụ request (cURL)
            "client_secret": "your_client_secret"
          }'
 
-Phản hồi
---------
+4.5 Phản hồi
+------------
 **HTTP 200 – Success**
 
 .. code-block:: json
@@ -109,8 +109,8 @@ Phản hồi
      - M
      - integer
 
-Lỗi thường gặp
---------------
+4.6 Lỗi thường gặp
+------------------
 **HTTP 401 – invalid_client (sai ``client_id``)**
 
 .. code-block:: json
