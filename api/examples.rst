@@ -9,23 +9,16 @@
 
 **Request**::
 
-    curl -X GET https://api.example.com/v1/users \
-      -H "Authorization: Bearer <token>"
+    curl -X 'GET' \
+  'https://samdev.aumpilot.com/v4/demo' \
+  -H 'accept: application/json' \
+  -H 'api-key: 1'
 
 **Response**::
 
-    [
-      {
-        "id": 1,
-        "name": "Nguyen Van A",
-        "email": "a@example.com"
-      },
-      {
-        "id": 2,
-        "name": "Tran Van B",
-        "email": "b@example.com"
-      }
-    ]
+    {
+      "Hello": "World"
+    }
 
 5.2 Tạo mới người dùng
 ----------------------
