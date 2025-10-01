@@ -191,7 +191,6 @@ O. Cấu hình
     + Điều kiện nhảy level trong cấu hình:
         Điều kiện:
             Chưa có đơn hàng: Đơn hàng trên cơ hội chưa có(order_ids) hoặc đã có đơn hàng và hóa đơn nhưng chưa được thanh toán.
-
             Đã nộp lệ phí, học phi 1 phần: Đã có đơn hàng và thanh toán hóa đơn, nhưng chưa thanh toán đủ
             Đã nộp đủ HP, LP:
         Chưa có hồ sơ:

@@ -18,10 +18,10 @@ Tổng quan
 Module ``th_crm`` được kế thừa và mở rộng các chức năng quản lý chấm công trong module gốc ``crm`` của Odoo.Module này có thêm các chức năng như check trùng xử lý cơ hội, tạo hồ sơ, hệ thống xét tuyển,...
 
 Chức năng chỉnh sửa
-------------------
+-------------------
 
 1. Quản lý cơ hội (crm)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 **Model kế thừa**:
 
@@ -53,7 +53,7 @@ Chức năng chỉnh sửa
   - ``crm_menu_config``: Kế thừa Menu mở module Cấu hình, thêm và bỏ 1 số quyền người dùng truy cập .
 
 2. Quản lý đội nhóm CRM (crm team)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Model kế thừa**:
 - ``crm.team`` (từ module gốc ``crm.team``)
@@ -66,7 +66,7 @@ Chức năng chỉnh sửa
   - ``write``: Ghi đè hàm gốc để cập nhật lại thành viên, trưởng nhóm giám sát của từng đội nhóm.
 
 3. Quản lý mối quan hệ CRM (crm.stage)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Model kế thừa**:
 - ``crm.stage`` (từ module gốc ``crm.stage``)
@@ -81,13 +81,13 @@ Chức năng chỉnh sửa
   - ``write``: Ghi đè hàm gốc để cập nhật lại thành viên, trưởng nhóm giám sát của từng đội nhóm.
 
 4. Quản lý người dùng (res.users)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Mục đích kế thừa**:
 - Kế thừa res.user để thêm mới trường thông tin cần thiết(thêm trường lưu các quản lý CRM).
 
 5. Quản lý người dùng (sale.order)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Mục đích kế thừa**:
 - Kế thừa sale.order để thêm mới trường thông tin cần thiết được related từ bên CRM.
@@ -102,7 +102,7 @@ Chức năng chỉnh sửa
   -file ``sale_order_view.xml``: Kế thừa các formview,treeview,searchview và chỉnh sửa giao diện cho phù hợp yêu cầu từ người dùng.
 
 6. Quản lý Lognote (mail.message)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Mục đích kế thừa**:
 
@@ -112,7 +112,7 @@ Chức năng chỉnh sửa
   - ``create``: Ghi đè hàm gốc để hỗ trợ kiểm tra sản phẩm của đơn hàng, đánh dấu đơn hàng thuộc CRM.
 
 7. Quản lý người dùng (account.move)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Mục đích kế thừa**:
 - Kế thừa account.move để thêm mới trường thông tin cần thiết được related từ bên CRM.

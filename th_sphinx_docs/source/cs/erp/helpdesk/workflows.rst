@@ -40,6 +40,7 @@ B. Cấu hình
 - Ví dụ: Khu vực IT, Kế toán, PTML, TTHL,...
 - Tại menu cấu hình, người dùng có thể tạo các khu vực hỗ trợ khác nhau để phân loại phiếu hỗ trợ.
   Người dùng cần nhập các thông tin sau:
+
     + Tên khu vực hỗ trợ
     + Mô tả
 
@@ -59,6 +60,7 @@ B. Cấu hình
     + Mô tả đặc điểm danh mục
 
 4. Nhóm hỗ trợ
+
 - Mục đích: Tổ chức nhân sự thành các nhóm chuyên môn để xử lý các loại yêu cầu khác nhau.
 - Ví dụ: Nhóm hỗ trợ phần cứng, Nhóm system admin, website admin,...
     + Tạo nhóm hỗ trợ mới bằng cách nhập tên nhóm
@@ -66,12 +68,14 @@ B. Cấu hình
     + Tích SLA cho nhóm(nếu cần thiết)
 
 5. Đặc điểm danh mục
+
 - Mục đích: Định nghĩa các thuộc tính và yêu cầu đặc thù cho từng danh mục, chủ đề, giúp thu thập đầy đủ thông tin cần thiết khi tạo phiếu.
 - Ví dụ: Đối với danh mục Phần cứng, cần có thông tin về model thiết bị, số serial,...
     + Nhập thông tin tên đặc điểm danh mục, danh mục hỗ trợ
     + Tại tab chủ đề chọn thêm chủ để và gán nhóm hỗ trợ
 
 6. Chính sách SLA
+
 - Mục đích: Thiết lập các cam kết về thời gian xử lý cho từng loại yêu cầu, giúp đảm bảo chất lượng dịch vụ và theo dõi hiệu suất.
 - Ví dụ: Phiếu khẩn cấp cần phản hồi trong 30 phút, xử lý trong 2 giờ,...
     + Gán SLA cho khu vực/danh mục
