@@ -1,15 +1,15 @@
 Phân quyền
 ----------
 
-A.	Quyền ITC
-~~~~~~~~~~~~~
+A. Quyền ITC
+~~~~~~~~~~~~
 
-1.	 Khách
-^^^^^^^^^^
+1. Khách
+^^^^^^^^
 -	Quyền khách chỉ có thể nhìn thấy module bên ngoài
 
-2.	 User
-^^^^^^^^^
+2. User
+^^^^^^^
 i. Dự Án
 
 -	Quyền User thấy toàn bộ dự án
@@ -41,8 +41,8 @@ iv. Báo cáo
 -	Quyền User xuất báo cáo chi tiết testcase
 -	Quyền User phân tích nhiệm vụ
 
-3.	 Quản trị (Administrator)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3. Quản trị (Administrator)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 i. Dự án
 
 -	Quyền Quản trị thấy toàn bộ dự án
@@ -88,8 +88,8 @@ v. Cấu hình
 -	Quyền Quản trị cấu hình Settings, dự án, đội nhóm, giai đoạn nhiệm vụ, giai đoạn dự án, Tags, kiểu hoạt động, độ khó
 
 
-B.	Quyền quản lý Testcase
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+B. Quyền quản lý Testcase
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -	Quyền quản lý testcase là quyền thêm, phải đi kèm với quyền User trở lên
 -	Quyền Quản lý testcase thấy toàn bộ test case
@@ -100,8 +100,8 @@ B.	Quyền quản lý Testcase
 -	Quyền Quản lý testcase thay đổi trạng thái test case
 -	Quyền Quản lý testcase tạo bug ở test case
 
-C.	Các quyền khác
-~~~~~~~~~~~~~~~~~~
+C. Các quyền khác
+~~~~~~~~~~~~~~~~~
 -	Use Subtasks ITC: Cho phép sử dụng tính năng nhiệm vụ phụ (subtasks) trong dự án.
 -	Use Rating on Project ITC: Cho phép sử dụng tính năng đánh giá (rating) cho dự án hoặc nhiệm vụ.
 -	Use Stages on Project ITC: Cho phép sử dụng và quản lý giai đoạn (stages) của dự án.
