@@ -83,3 +83,4 @@ Tại đây bạn sẽ tìm thấy:
 
    api/index
    sphinx/index
+   th_sphinx_docs/source/index
