@@ -165,3 +165,11 @@ ERP (Sambala)
       :class-card: sd-rounded-lg sd-shadow-md
 
       PMS
+
+   .. grid-item-card:: CFS
+      :link: cfs/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      CFS
+
