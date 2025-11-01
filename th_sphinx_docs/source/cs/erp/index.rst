@@ -151,3 +151,11 @@ ERP (Sambala)
       :class-card: sd-rounded-lg sd-shadow-md
 
       Work Leave
+
+   .. grid-item-card:: MARKETING
+      :link: mkt/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      Marketing
+
