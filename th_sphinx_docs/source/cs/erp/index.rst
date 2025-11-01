@@ -159,3 +159,9 @@ ERP (Sambala)
 
       Marketing
 
+   .. grid-item-card:: PMS
+      :link: pms/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      PMS
