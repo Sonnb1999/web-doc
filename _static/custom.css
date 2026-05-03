@@ -1,47 +1,36 @@
-/* ================================================================
-   ODOO-STYLE SKIN cho piccolo_theme
-   Font cursive: Pacifico (giống Odoo docs)
-   Dark mode: [data-mode=dark], [data-mode=darkest]
-   ================================================================ */
+/* @import PHẢI ĐẦU TIÊN */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* Thêm vào đầu custom.css — override màu navbar piccolo */
+/* ── Variables ── */
 :root {
   --mainNavColor: #714B67;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-/* ── 1. Ẩn h1 tự sinh của piccolo trên trang chủ (hero thay thế) ─ */
-/* div.document h1:first-of-type {
-  display: none;
-} */
-
-/* 1 MỚI — chỉ ẩn h1 do Sphinx tự sinh, không đụng vào hero */
+/* ── Ẩn h1 Sphinx tự sinh ── */
 div.document div.body > section > h1:first-child,
 div.document div.body > div.section > h1:first-child {
   display: none;
 }
 
-/* ── 2. Mở rộng documentwrapper để hero full-width ───────────────── */
-div.document div.documentwrapper {
-  max-width: none;
+/* ── Force hiện h1 trong hero (chống override) ── */
+.odoo-hero h1,
+h1.odoo-hero-title {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-/* ── 3. Hero full-width trong div.document ────────────────────────── */
+/* ── Hero ── */
 .odoo-hero {
   background: #714B67;
-  /* Break ra khỏi padding của body piccolo */
   margin-left: -2rem;
   margin-right: -2rem;
-  /* margin-top: -2rem; */
   margin-top: calc(-2rem - 1px);
   padding: 48px 2rem 40px;
   position: relative;
   overflow: hidden;
 }
 
-/* Decorative circles */
 .odoo-hero::before {
   content: "";
   position: absolute;
@@ -74,7 +63,12 @@ div.document div.documentwrapper {
   line-height: 1.2;
 }
 
-/* ── 4. Cards grid ────────────────────────────────────────────────── */
+/* ── documentwrapper full-width ── */
+div.document div.documentwrapper {
+  max-width: none;
+}
+
+/* ── Cards ── */
 .odoo-cards-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -94,10 +88,10 @@ div.document div.documentwrapper {
 }
 
 .odoo-card:hover {
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
   transform: translateY(-3px);
   text-decoration: none !important;
-  border-color: rgba(113, 75, 103, 0.15);
+  border-color: rgba(113,75,103,0.15);
 }
 
 .odoo-card-icon {
@@ -125,59 +119,7 @@ div.document div.documentwrapper {
   margin: 0 !important;
 }
 
-/* ── 5. Responsive ────────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  .odoo-cards-wrap {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .odoo-cards-wrap {
-    grid-template-columns: 1fr;
-  }
-  .odoo-hero-title {
-    font-size: 2rem !important;
-  }
-}
-
-/* ── 6. Dark mode — piccolo dùng [data-mode=dark|darkest] ────────── */
-:root[data-mode=dark] .odoo-hero,
-:root[data-mode=darkest] .odoo-hero {
-  background: #4a2d45;
-}
-
-:root[data-mode=dark] .odoo-card,
-:root[data-mode=darkest] .odoo-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-:root[data-mode=dark] .odoo-card:hover,
-:root[data-mode=darkest] .odoo-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(156, 110, 138, 0.4);
-}
-
-:root[data-mode=dark] .odoo-card-title,
-:root[data-mode=darkest] .odoo-card-title {
-  color: #ffffff !important;
-}
-
-:root[data-mode=dark] .odoo-card-desc,
-:root[data-mode=darkest] .odoo-card-desc {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-/* ── 7. Override piccolo link color trong card ───────────────────── */
-div.document .odoo-card:hover {
-  color: inherit !important;
-}
-
-/* ================================================================
-   APP GRID — Odoo "User Docs" style (3-col link grid)
-   ================================================================ */
-
+/* ── App Grid ── */
 .app-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -186,7 +128,7 @@ div.document .odoo-card:hover {
 }
 
 .app-section-title {
-  font-family: inherit !important;           /* không dùng Pacifico ở đây */
+  font-family: inherit !important;
   font-size: 1.15rem !important;
   font-weight: 700 !important;
   color: var(--fontColor) !important;
@@ -211,7 +153,7 @@ div.document .odoo-card:hover {
   display: block;
   padding: 4px 0;
   font-size: 0.92rem;
-  color: #017E84 !important;               /* teal như Odoo */
+  color: #017E84 !important;
   text-decoration: none !important;
   line-height: 1.5;
   transition: color 0.15s ease;
@@ -219,29 +161,49 @@ div.document .odoo-card:hover {
 
 .app-link-list li a:hover {
   color: #014f52 !important;
-  text-decoration: none !important;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 900px) {
+  .odoo-cards-wrap,
   .app-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 560px) {
+  .odoo-cards-wrap,
   .app-grid {
     grid-template-columns: 1fr;
   }
+  .odoo-hero-title {
+    font-size: 2rem !important;
+  }
 }
 
-/* Dark mode */
+/* ── Dark mode ── */
+:root[data-mode=dark] .odoo-hero,
+:root[data-mode=darkest] .odoo-hero {
+  background: #4a2d45;
+}
+
+:root[data-mode=dark] .odoo-card,
+:root[data-mode=darkest] .odoo-card {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.08);
+}
+
+:root[data-mode=dark] .odoo-card-title,
+:root[data-mode=darkest] .odoo-card-title {
+  color: #ffffff !important;
+}
+
+:root[data-mode=dark] .odoo-card-desc,
+:root[data-mode=darkest] .odoo-card-desc {
+  color: rgba(255,255,255,0.65);
+}
+
 :root[data-mode=dark] .app-link-list li a,
 :root[data-mode=darkest] .app-link-list li a {
   color: #26A69A !important;
-}
-
-:root[data-mode=dark] .app-link-list li a:hover,
-:root[data-mode=darkest] .app-link-list li a:hover {
-  color: #4DB6AC !important;
 }
