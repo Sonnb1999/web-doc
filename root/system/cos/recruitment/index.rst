@@ -1,7 +1,10 @@
+Chiêu binh
+==========
+
 .. raw:: html
 
    <div class="odoo-hero">
-     <h1 class="odoo-hero-title">Tài liệu CRM</h1>
+     <h1 class="odoo-hero-title">Tài liệu Chiêu binh</h1>
    </div>
 
    <div class="odoo-cards-wrap">

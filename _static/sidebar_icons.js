@@ -63,19 +63,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 0);
 
-  /* ── Thêm chevron cho item có submenu ── */
+  /* ── Thêm chevron + expand/collapse cho item có submenu ── */
   document.querySelectorAll(".sphinxsidebarwrapper li").forEach(function (li) {
-    const hasChildren = li.querySelector("ul");
+    const ul = li.querySelector(":scope > ul");
     const link = li.querySelector(":scope > a");
-    if (hasChildren && link) {
-      const chevron = document.createElement("span");
-      chevron.className = "sb-chevron";
-      chevron.innerHTML =
-        '<svg viewBox="0 0 10 10" width="10" height="10" fill="none">' +
-        '<path d="M3 2l4 3-4 3" stroke="currentColor" stroke-width="1.5" ' +
-        'stroke-linecap="round" stroke-linejoin="round"/></svg>';
-      link.prepend(chevron);
+    if (!ul || !link) return;
+
+    /* Thêm chevron */
+    const chevron = document.createElement("span");
+    chevron.className = "sb-chevron";
+    chevron.innerHTML =
+      '<svg viewBox="0 0 10 10" width="10" height="10" fill="none">' +
+      '<path d="M3 2l4 3-4 3" stroke="currentColor" stroke-width="1.5" ' +
+      'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    link.prepend(chevron);
+
+    /* Thu gọn những item không active */
+    if (!li.classList.contains("current")) {
+      ul.style.display = "none";
+      li.classList.add("sb-collapsed");
     }
+
+    /* Click chevron: toggle mở/đóng, không điều hướng */
+    chevron.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isCollapsed = li.classList.toggle("sb-collapsed");
+      ul.style.display = isCollapsed ? "none" : "block";
+      chevron.style.transform = isCollapsed ? "" : "rotate(90deg)";
+    });
   });
+
+  /* ── Ẩn RST title (h1) khi trang đã có hero section ── */
+  if (document.querySelector(".odoo-hero")) {
+    var h1 = document.querySelector(".bodywrapper h1, div.body h1");
+    if (h1) h1.style.display = "none";
+  }
 
 });

@@ -72,7 +72,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
 
 .. toctree::
   :hidden:
-  :caption: Hệ thống COS
   :maxdepth: 3
 
-  cos/index
+  cos/crm/index
+  cos/recruitment/index

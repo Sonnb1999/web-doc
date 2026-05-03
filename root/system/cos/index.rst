@@ -1,6 +1,6 @@
 .. toctree::
    :hidden:
-   :maxdepth: 1
+   :maxdepth: 2
    
    CRM <crm/index>
    Chiêu binh <recruitment/index>

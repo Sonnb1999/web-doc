@@ -1,3 +1,6 @@
+CRM
+===
+
 .. raw:: html
 
    <div class="odoo-hero">
