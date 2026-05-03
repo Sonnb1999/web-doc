@@ -51,6 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  /* ── Override sidebar toggle — co dãn nội dung khi ẩn/hiện ── */
+  setTimeout(function () {
+    const toggleBtn = document.querySelector('#toggle_sidebar a');
+    if (toggleBtn) {
+      toggleBtn.onclick = function (event) {
+        event.preventDefault();
+        document.querySelector('.sphinxsidebar').style.display = '';
+        document.body.classList.toggle('sidebar-collapsed');
+      };
+    }
+  }, 0);
+
   /* ── Thêm chevron cho item có submenu ── */
   document.querySelectorAll(".sphinxsidebarwrapper li").forEach(function (li) {
     const hasChildren = li.querySelector("ul");

@@ -19,6 +19,34 @@ div#top_nav nav {
 /* ================================================================
    SIDEBAR
    ================================================================ */
+div.sphinxsidebar {
+  width: 17rem !important;
+  transition: transform 0.25s ease !important;
+}
+
+div.document {
+  margin-left: 17rem !important;
+  transition: margin-left 0.25s ease !important;
+}
+
+div.button_nav_wrapper {
+  margin-left: 17rem !important;
+  transition: margin-left 0.25s ease !important;
+}
+
+/* Trạng thái sidebar bị thu gọn */
+body.sidebar-collapsed div.sphinxsidebar {
+  transform: translateX(-17rem) !important;
+}
+
+body.sidebar-collapsed div.document {
+  margin-left: 0 !important;
+}
+
+body.sidebar-collapsed div.button_nav_wrapper {
+  margin-left: 0 !important;
+}
+
 #sidebar {
   background: #ffffff !important;
   border-right: 1px solid #ede8f0 !important;
