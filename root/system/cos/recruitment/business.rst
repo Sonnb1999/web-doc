@@ -70,7 +70,7 @@ Module quản lý toàn diện quy trình tiếp nhận hồ sơ ứng viên (th
      - Tải và lưu tệp/link đính kèm CV trình bày năng lực của ứng viên.
 
 3.2 Luồng 3B — Đánh giá Xử lý Hồ sơ ``[COS-SAM-REC-004, COS-SAM-REC-005]``
---------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 **Mục đích:** Trình bày danh sách, tra cứu và xử lý chuyển đổi ứng viên qua các giai đoạn Phỏng vấn, Hội nhập và Thử việc.
 
@@ -151,7 +151,7 @@ Module quản lý toàn diện quy trình tiếp nhận hồ sơ ứng viên (th
      - Tải tệp Excel.
 
 3.5 Luồng 3E — Cấu hình & Phân quyền Hệ thống ``[COS-SAM-REC-006, COS-SAM-REC-007]``
---------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 **Mục đích:** Thiết lập cấu trúc danh mục nền tảng và phân quyền truy cập an toàn cho module giúp hệ thống hoạt động thống nhất.
 

@@ -1,5 +1,5 @@
-System — Tài liệu hệ thống
-===========================
+SCS — Share Core Service
+========================
 
 Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Technical spec của các module.
 
@@ -8,7 +8,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
    <div class="app-grid">
 
      <div class="app-section">
-       <h2 class="app-section-title">COS — Core Systems</h2>
+       <h2 class="app-section-title">HRM</h2>
        <ul class="app-link-list">
          <li><a href="../system/cos/crm/index.html">CRM</a></li>
          <li><a href="../cos/apm/index.html">APM</a></li>
@@ -19,7 +19,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
      </div>
 
      <div class="app-section">
-       <h2 class="app-section-title">PCS — Partner & customer interactions systems</h2>
+       <h2 class="app-section-title">Kinh doanh</h2>
        <ul class="app-link-list">
          <li><a href="../pcs/portal/index.html">Customer Portal</a></li>
          <li><a href="../pcs/loyalty/index.html">Loyalty Program</a></li>
@@ -29,7 +29,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
      </div>
 
      <div class="app-section">
-       <h2 class="app-section-title">SCS — Share core service</h2>
+       <h2 class="app-section-title">Sản xuất</h2>
        <ul class="app-link-list">
          <li><a href="../scs/purchase/index.html">Purchase</a></li>
          <li><a href="../scs/warehouse/index.html">Warehouse</a></li>
@@ -39,7 +39,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
      </div>
 
      <div class="app-section">
-       <h2 class="app-section-title">E-commerce systems</h2>
+       <h2 class="app-section-title">Vận hành</h2>
        <ul class="app-link-list">
          <li><a href="../ecommerce/website/index.html">Website</a></li>
          <li><a href="../ecommerce/shop/index.html">Online Shop</a></li>
@@ -47,36 +47,8 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
          <li><a href="../ecommerce/promotion/index.html">Promotion</a></li>
        </ul>
      </div>
-
-     <div class="app-section">
-       <h2 class="app-section-title">Marketing systems</h2>
-       <ul class="app-link-list">
-         <li><a href="../ecommerce/website/index.html">Website</a></li>
-         <li><a href="../ecommerce/shop/index.html">Online Shop</a></li>
-         <li><a href="../ecommerce/payment/index.html">Payment Gateway</a></li>
-         <li><a href="../ecommerce/promotion/index.html">Promotion</a></li>
-       </ul>
-     </div>
-
-     <div class="app-section">
-       <h2 class="app-section-title">Internal System</h2>
-       <ul class="app-link-list">
-         <li><a href="../internal/helpdesk/index.html">Helpdesk</a></li>
-         <li><a href="../internal/project/index.html">Project</a></li>
-         <li><a href="../internal/timesheet/index.html">Timesheet</a></li>
-         <li><a href="../internal/document/index.html">Document</a></li>
-       </ul>
-     </div>
-
    </div>
 
 .. toctree::
-  :hidden:
-  :maxdepth: 5
-
-  cos/index
-  ecommerce/index
-  internal_system/index
-  marketing/index
-  pcs/index
-  scs/index
+   :hidden:
+   :maxdepth: 2

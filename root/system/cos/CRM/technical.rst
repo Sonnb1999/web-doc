@@ -482,6 +482,7 @@ ABS CRM — Kỹ thuật
 **Quan hệ chính:**
 
 .. code-block:: text
+
    crm.lead ──Many2one──→ res.partner (khách hàng / sinh viên gắn với cơ hội)
    crm.lead ──Many2one──→ crm.stage (mối quan hệ của cơ hội)
    crm.lead ──Many2one──→ res.users (người chăm sóc cơ hội)
@@ -572,6 +573,7 @@ ABS CRM — Kỹ thuật
 **Quan hệ chính:**
 
 .. code-block:: text
+
    th.dividing.ring ──Many2many──→ res.users (thành viên tham gia vòng chia)
    th.dividing.ring ──Many2one──→ th.origin (trường học áp dụng vòng chia)
    crm.lead ──Many2one──→ th.dividing.ring (vòng chia gắn với cơ hội)
@@ -623,7 +625,7 @@ ABS CRM — Kỹ thuật
 
 
 2.4. th.duplicate.check.history (Lịch sử kiểm tra trùng) — *model mới*
---------------------------------------------------
+----------------------------------------------------------------------
 
 **Mục đích:** Lưu lại từng lần hệ thống hoặc người dùng xử lý trùng cơ hội. Model này phục vụ tra cứu lịch sử, khiếu nại, đối soát kết quả thắng/thua và audit quá trình check trùng.
 
@@ -1491,7 +1493,7 @@ ABS CRM — Kỹ thuật
 
 
 3.4. Quản lý Hồ sơ và đợt bàn giao hồ sơ ``[C4: COS-SAM-CRM-005]``
---------------------------------------------
+------------------------------------------------------------------
 
 **``crm.lead.action_create_profile()``** — *Hàm mới*
 
@@ -1606,7 +1608,7 @@ ABS CRM — Kỹ thuật
 
 
 3.5. Danh sách xét tuyển ``[C4: COS-SAM-CRM-006]``
---------------------------------------------
+--------------------------------------------------
 
 **``th.admission.list.action_check_list()``** — *Hàm mới*
 
@@ -1637,7 +1639,7 @@ ABS CRM — Kỹ thuật
 
 
 3.6. Quyết định trúng tuyển ``[C4: COS-SAM-CRM-007]``
---------------------------------------------
+-----------------------------------------------------
 
 **``th.admission.decision.th_action_confirm()``** — *Hàm mới*
 
@@ -1807,7 +1809,7 @@ ABS CRM — Kỹ thuật
 
 
 3.10. Thu hồi cơ hội về kho ``[C4: COS-SAM-CRM-011]``
---------------------------------------------
+-----------------------------------------------------
 
 **``crm.lead.th_action_archive()``** — *Hàm mới*
 
@@ -2293,7 +2295,8 @@ ABS CRM — Kỹ thuật
 
    * - Module
      - Hướng
-* - ``sale_crm`` / ``sale``
+     - Cơ chế kỹ thuật
+   * - ``sale_crm`` / ``sale``
      - CRM → Sale
      - Gọi trực tiếp qua ORM: ``crm.lead.action_sale_quotations_new()`` mở luồng tạo ``sale.order`` từ ``opportunity_id``; ``sale.order.create()`` xử lý riêng cho đơn CRM, sao chép dữ liệu từ cơ hội và có thể tự xác nhận đơn.
    * - ``account``
