@@ -19,7 +19,7 @@ html_theme_options = {
     "show_theme_credit": False,
     "banner_text": False,
 }
-html_title = "Tài liệu TT - ITC"
+html_title = "Tài liệu trung tâm CNTT"
 
 # Hiển thị global TOC ở sidebar trên mọi trang
 html_sidebars = {

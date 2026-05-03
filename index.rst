@@ -1,5 +1,7 @@
-.. raw:: html
+.. meta::
+   :title: Tài liệu trung tâm CNTT
 
+.. raw:: html
    <div class="odoo-hero">
      <h1 class="odoo-hero-title">Tài liệu</h1>
    </div>
