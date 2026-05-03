@@ -1,0 +1,45 @@
+Tài liệu kỹ thuật hệ thống
+==========================
+
+Xin chào, đây là tài liệu module của tất cả module thuộc Core Systems, Partner & Customer Interaction Systems,
+Marketing Systems và E-Teaching and E-Commerce Systems
+
+.. grid:: 2
+
+   .. grid-item-card:: Architect (kiến trúc tổng thể)
+      :link: architect/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      Architect
+
+   .. grid-item-card:: Business (nghiệp vụ chung của công ty)
+      :link: business/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      Business
+
+   .. grid-item-card:: Process (quy trình)
+      :link: process/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      Process
+
+   .. grid-item-card:: System (tài liệu hệ thống gồm Business & Technical)
+      :link: system/index
+      :link-type: doc
+      :class-card: sd-rounded-lg sd-shadow-md
+
+      System
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Các dự án:
+
+   cs/index
+   pcis/index
+   mkt/index
+   e2e/index
