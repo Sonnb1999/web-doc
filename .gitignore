@@ -70,6 +70,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+web-doc/_build/
 
 # PyBuilder
 .pybuilder/
@@ -208,3 +209,5 @@ __marimo__/
 
 .idea/
 .build/
+.claude/
+_build/

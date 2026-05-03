@@ -1,86 +1,70 @@
-===============================
-📘 API Documentation Portal
-===============================
+Tài liệu trung tâm CNTT
+=======================
 
-Chào mừng bạn đến với **Tài liệu API** của dự án!  
-Tại đây bạn sẽ tìm thấy:
-- Tổng quan kiến trúc & nguyên tắc thiết kế API
-- Các endpoint RESTful với ví dụ chi tiết
-- Hướng dẫn dành cho developer & user
-- Cập nhật & thay đổi mới nhất
+.. raw:: html
+   <div class="odoo-hero">
+     <h1 class="odoo-hero-title">Tài liệu</h1>
+   </div>
 
--------------------------------
-🚀 Bắt đầu nhanh
--------------------------------
+   <div class="odoo-cards-wrap">
 
-.. grid:: 2
+     <a class="odoo-card" href="root/architect/index.html">
+       <span class="odoo-card-icon">🏗️</span>
+       <h2 class="odoo-card-title">Architect</h2>
+       <p class="odoo-card-desc">Kiến trúc tổng thể, sơ đồ thành phần và các quyết định thiết kế kỹ thuật.</p>
+     </a>
 
-   .. grid-item-card:: 📖 Tổng quan API
-      :link: api/overview
-      :link-type: doc
-      :class-card: sd-rounded-lg sd-shadow-md
+     <a class="odoo-card" href="root/business/index.html">
+       <span class="odoo-card-icon">💼</span>
+       <h2 class="odoo-card-title">Business</h2>
+       <p class="odoo-card-desc">Nghiệp vụ chung, quy tắc kinh doanh và các domain chức năng.</p>
+     </a>
 
-      Giới thiệu RESTful API, cấu trúc hệ thống và mục tiêu triển khai.
+     <a class="odoo-card" href="root/process/index.html">
+       <span class="odoo-card-icon">🔄</span>
+       <h2 class="odoo-card-title">Process</h2>
+       <p class="odoo-card-desc">Quy trình vận hành, workflow và standard operating procedures.</p>
+     </a>
 
-   .. grid-item-card:: 🔑 Quy tắc & Authentication
-      :link: api/guidelines
-      :link-type: doc
-      :class-card: sd-rounded-lg sd-shadow-md
-
-      Các quy tắc gọi API, chuẩn dữ liệu và cơ chế xác thực (OAuth2).
-
-   .. grid-item-card:: ⚙️ Request & Response
-      :link: api/requests_responses
-      :link-type: doc
-      :class-card: sd-rounded-lg sd-shadow-md
-
-      Các phương thức phổ biến: GET, POST, PUT, DELETE, cùng ví dụ minh họa.
-
-   .. grid-item-card:: 📌 Auth 2.0
-      :link: api/oauth2
-      :link-type: doc
-      :class-card: sd-rounded-lg sd-shadow-md
-
-      Mẫu request/response và tình huống thường gặp khi tích hợp API.
-
-   .. grid-item-card:: 📝 Ví dụ điển hình
-      :link: api/examples
-      :link-type: doc
-      :class-card: sd-rounded-lg sd-shadow-md
-
-      Mẫu request/response và tình huống thường gặp khi tích hợp API.
-
-
--------------------------------
-📌 Tài liệu dành cho Developer
--------------------------------
-
-.. grid:: 2
-
-   .. grid-item-card:: 🛠 Developer Guide
-      :link: sphinx/index
-      :link-type: doc
-      :class-card: sd-rounded-lg sd-bg-light
-
-      Hướng dẫn build tài liệu bằng Sphinx & CI/CD pipeline.
-
--------------------------------
-🗓 Changelog
--------------------------------
-
-- **v1.2** – Bổ sung API `transaction/report`, cải thiện hiệu năng query.  
-- **v1.1** – Thêm cơ chế OAuth2 authentication.  
-- **v1.0** – Ra mắt bản đầu tiên của API.  
-
--------------------------------
-🔗 Liên kết nhanh
--------------------------------
+     <a class="odoo-card" href="root/system/index.html">
+       <span class="odoo-card-icon">⚙️</span>
+       <h2 class="odoo-card-title">System</h2>
+       <p class="odoo-card-desc">Tài liệu hệ thống đầy đủ — Business spec và Technical spec.</p>
+     </a>
+   </div>
 
 .. toctree::
    :hidden:
-   :caption: Nội dung chính
-   :maxdepth: 2
+   :caption: Kiến trúc & Nghiệp vụ
+   :maxdepth: 1
 
-   api/index
+   root/architect/index
+
+.. toctree::
+   :hidden:
+   :includehidden:
+   :caption: Business
+   :maxdepth: 1
+
+   root/business/index
+
+.. toctree::
+   :hidden:
+   :caption: Systems
+   :maxdepth: 1
+
+   root/system/index
+
+.. toctree::
+   :hidden:
+   :caption: Process
+   :maxdepth: 1
+
+   root/process/index
+
+.. toctree::
+   :hidden:
+   :caption: Sphinx
+   :maxdepth: 1
+
    sphinx/index
-   th_sphinx_docs/source/index
