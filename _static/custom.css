@@ -34,6 +34,22 @@ div.button_nav_wrapper {
   transition: margin-left 0.25s ease !important;
 }
 
+/* Ẩn sidebar trên trang home */
+body.home-page div.sphinxsidebar {
+  display: none !important;
+}
+body.home-page div.document {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.home-page div.button_nav_wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.home-page div.documentwrapper {
+  padding: 0 2.5rem !important;
+}
+
 /* Trạng thái sidebar bị thu gọn */
 body.sidebar-collapsed div.sphinxsidebar {
   transform: translateX(-17rem) !important;
@@ -168,6 +184,152 @@ body.sidebar-collapsed div.button_nav_wrapper {
 }
 .sphinxsidebarwrapper ul ul li a:not(:has(.sb-chevron)) {
   padding-left: 39px !important;
+}
+
+/* ================================================================
+   RIGHT SIDEBAR  — Odoo style
+   ================================================================ */
+#right_sidebar {
+  width: 18rem !important;
+  border-left: 1px solid #e5e5e5 !important;
+  background: #ffffff !important;
+  padding: 0 !important;
+  overflow-y: auto !important;
+  transition: transform 0.25s ease !important;
+}
+
+div.document {
+  margin-right: 18rem !important;
+  transition: margin-right 0.25s ease !important;
+}
+
+div.button_nav_wrapper {
+  margin-right: 18rem !important;
+  transition: margin-right 0.25s ease !important;
+}
+
+/* Thu gọn right sidebar */
+body.right-collapsed #right_sidebar {
+  transform: translateX(18rem) !important;
+}
+body.right-collapsed div.document {
+  margin-right: 0 !important;
+}
+body.right-collapsed div.button_nav_wrapper {
+  margin-right: 0 !important;
+}
+
+/* Header "Trên trang này" — bold, dark, like Odoo "ON THIS PAGE" */
+#right_sidebar > p:first-child {
+  padding: 20px 16px 12px !important;
+  margin: 0 !important;
+  border-bottom: none !important;
+}
+#right_sidebar > p:first-child a.toggle_right_sidebar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  text-decoration: none !important;
+  color: #1a1a1a !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+#right_sidebar > p:first-child .icon {
+  font-style: normal !important;
+  font-size: 0.85rem !important;
+  color: #999 !important;
+}
+
+/* Ẩn title cấp 1 (page title) trong right TOC */
+.page_toc > ul > li > a:not(.rs-link) {
+  display: none !important;
+}
+.page_toc > ul > li > ul {
+  padding-left: 0 !important;
+}
+
+/* List TOC */
+.page_toc ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.page_toc ul li a {
+  display: block !important;
+  padding: 3px 16px !important;
+  font-size: 0.875rem !important;
+  color: #6c757d !important;
+  text-decoration: none !important;
+  line-height: 1.5 !important;
+  border: none !important;
+  background: none !important;
+  transition: color 0.12s !important;
+  word-break: break-word !important;
+}
+.page_toc ul li a:hover {
+  color: #1a1a1a !important;
+  background: none !important;
+}
+.page_toc ul li a.rs-active {
+  color: #1a1a1a !important;
+  font-weight: 700 !important;
+  background: none !important;
+}
+
+/* Cấp 2 */
+.page_toc ul ul li a {
+  padding-left: 28px !important;
+  font-size: 0.855rem !important;
+}
+/* Cấp 3 */
+.page_toc ul ul ul li a {
+  padding-left: 40px !important;
+  font-size: 0.84rem !important;
+}
+
+/* Chevron — đơn giản, xoay khi mở */
+.rs-chevron {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 3px;
+  color: #aaa;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+.page_toc li.rs-open > a .rs-chevron {
+  transform: rotate(90deg);
+  color: #555;
+}
+.page_toc ul li a:hover .rs-chevron {
+  color: #555;
+}
+
+/* Button show right sidebar (khi đang ẩn) */
+#show_right_sidebar {
+  transition: right 0.25s ease !important;
+}
+
+/* Dark mode */
+:root[data-mode=dark] #right_sidebar,
+:root[data-mode=darkest] #right_sidebar {
+  background: #1c1820 !important;
+  border-left-color: rgba(255,255,255,0.08) !important;
+}
+:root[data-mode=dark] #right_sidebar > p:first-child a.toggle_right_sidebar,
+:root[data-mode=darkest] #right_sidebar > p:first-child a.toggle_right_sidebar {
+  color: rgba(255,255,255,0.9) !important;
+}
+:root[data-mode=dark] .page_toc ul li a,
+:root[data-mode=darkest] .page_toc ul li a {
+  color: rgba(255,255,255,0.5) !important;
+}
+:root[data-mode=dark] .page_toc ul li a:hover,
+:root[data-mode=darkest] .page_toc ul li a:hover,
+:root[data-mode=dark] .page_toc ul li a.rs-active,
+:root[data-mode=darkest] .page_toc ul li a.rs-active {
+  color: rgba(255,255,255,0.9) !important;
+  background: none !important;
 }
 
 /* ================================================================
