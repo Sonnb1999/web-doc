@@ -24,7 +24,7 @@ CRM
 
 .. toctree::
   :hidden:
-  :maxdepth: 1
+  :maxdepth: 2
 
   Nghiệp vụ <business>
   Kỹ thuật <technical>
