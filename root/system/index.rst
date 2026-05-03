@@ -71,8 +71,9 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
    </div>
 
 .. toctree::
-   :hidden:
-   :maxdepth: 3
-   :caption: ⚙️ Architect
+  :hidden:
+  :maxdepth: 3
+  :caption: ⚙️ Architect
 
-    ../architect/index
+  ../architect/index
+  cos/index

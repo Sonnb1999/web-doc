@@ -1,6 +1,3 @@
-ITC — Tài liệu Trung tâm
-===========================
-
 .. raw:: html
 
    <div class="odoo-hero">
@@ -36,11 +33,22 @@ ITC — Tài liệu Trung tâm
 
 .. toctree::
    :hidden:
+   :caption: Kiến trúc & Nghiệp vụ
    :maxdepth: 4
-   
-   system/index
-   system/cos/index
-   system/pcs/index
-   system/scs/index
-   system/ecommerce/index
-   system/internal_system/index
+
+   root/architect/index
+
+.. toctree::
+   :hidden:
+   :caption: Core Systems
+   :maxdepth: 4
+
+   root/system/index
+   root/system/cos/index
+
+.. toctree::
+   :hidden:
+   :caption: E-Teaching & E-Commerce
+   :maxdepth: 4
+
+   sphinx/index

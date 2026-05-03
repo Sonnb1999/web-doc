@@ -25,6 +25,4 @@ Chi tiết module:
 
 .. toctree::
    :maxdepth: 2
-
-   technical
-
+    technical

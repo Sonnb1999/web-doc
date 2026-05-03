@@ -1,32 +1,163 @@
-/* @import PHẢI ĐẦU TIÊN */
+/* @import BẮT BUỘC ĐẦU TIÊN */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* ── Variables ── */
+/* ================================================================
+   VARIABLES
+   ================================================================ */
 :root {
   --mainNavColor: #714B67;
+  --oc-purple: #714B67;
 }
 
-/* ── Ẩn h1 Sphinx tự sinh ── */
-div.document div.body > section > h1:first-child,
-div.document div.body > div.section > h1:first-child {
-  display: none;
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+div#top_nav nav {
+  background-color: var(--mainNavColor) !important;
 }
 
-/* ── Force hiện h1 trong hero (chống override) ── */
-.odoo-hero h1,
-h1.odoo-hero-title {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+/* ================================================================
+   SIDEBAR
+   ================================================================ */
+#sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #ede8f0 !important;
+  padding: 12px 0 24px 0 !important;
 }
 
-/* ── Hero ── */
+/* Caption nhóm */
+.sphinxsidebarwrapper p.caption {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px !important;
+  text-transform: none !important;
+  color: #714B67 !important;
+  padding: 16px 12px 6px 12px !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.sphinxsidebarwrapper p.caption:not(:first-of-type) {
+  border-top: 1px solid #f0ebf4 !important;
+  margin-top: 8px !important;
+  padding-top: 16px !important;
+}
+
+.sphinxsidebarwrapper p.caption .caption-text {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #714B67 !important;
+}
+
+/* SVG icon trong caption */
+.sb-cap-icon {
+  display: inline-flex;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.sb-cap-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.sb-cap-text {
+  display: inline;
+}
+
+/* List items */
+.sphinxsidebarwrapper ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.sphinxsidebarwrapper ul li a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 5px 10px 5px 12px !important;
+  font-size: 0.875rem !important;
+  color: #252630 !important;
+  text-decoration: none !important;
+  border-left: 3px solid transparent !important;
+  border-radius: 0 6px 6px 0 !important;
+  margin-right: 8px !important;
+  line-height: 1.45 !important;
+  transition: background 0.12s ease, color 0.12s ease !important;
+}
+
+.sphinxsidebarwrapper ul li a:hover {
+  background: #f5f0f7 !important;
+  color: #714B67 !important;
+  text-decoration: none !important;
+}
+
+.sphinxsidebarwrapper ul li.current > a {
+  background: #ede7f0 !important;
+  color: #714B67 !important;
+  font-weight: 600 !important;
+  border-left-color: #714B67 !important;
+}
+
+/* Cấp 2 */
+.sphinxsidebarwrapper ul ul li a {
+  padding-left: 24px !important;
+  font-size: 0.855rem !important;
+  color: #555 !important;
+}
+
+/* Cấp 3 */
+.sphinxsidebarwrapper ul ul ul li a {
+  padding-left: 36px !important;
+  font-size: 0.84rem !important;
+  color: #777 !important;
+}
+
+/* Chevron */
+.sb-chevron {
+  display: inline-flex;
+  color: #bbb;
+  flex-shrink: 0;
+  margin-right: 2px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.sphinxsidebarwrapper li.current > a .sb-chevron {
+  transform: rotate(90deg);
+  color: #714B67;
+}
+.sphinxsidebarwrapper ul li a:hover .sb-chevron {
+  color: #714B67;
+}
+
+/* Indent items without chevron to align with chevron items */
+.sphinxsidebarwrapper ul li a:not(:has(.sb-chevron)) {
+  padding-left: 27px !important;
+}
+.sphinxsidebarwrapper ul ul li a:not(:has(.sb-chevron)) {
+  padding-left: 39px !important;
+}
+
+/* ================================================================
+   DOCUMENTWRAPPER
+   ================================================================ */
+div.document div.documentwrapper {
+  max-width: none;
+}
+
+/* ================================================================
+   HERO
+   ================================================================ */
 .odoo-hero {
   background: #714B67;
   margin-left: -2rem;
   margin-right: -2rem;
   margin-top: calc(-2rem - 1px);
-  padding: 48px 2rem 40px;
+  padding: 48px 2.5rem 40px;
   position: relative;
   overflow: hidden;
 }
@@ -61,14 +192,13 @@ h1.odoo-hero-title {
   position: relative;
   z-index: 1;
   line-height: 1.2;
+  display: block !important;
+  visibility: visible !important;
 }
 
-/* ── documentwrapper full-width ── */
-div.document div.documentwrapper {
-  max-width: none;
-}
-
-/* ── Cards ── */
+/* ================================================================
+   CARDS TRANG CHỦ
+   ================================================================ */
 .odoo-cards-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -83,15 +213,16 @@ div.document div.documentwrapper {
   padding: 28px 24px;
   text-decoration: none !important;
   color: inherit !important;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
   border: 1px solid transparent;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .odoo-card:hover {
   box-shadow: 0 8px 28px rgba(0,0,0,0.10);
   transform: translateY(-3px);
-  text-decoration: none !important;
   border-color: rgba(113,75,103,0.15);
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .odoo-card-icon {
@@ -119,7 +250,9 @@ div.document div.documentwrapper {
   margin: 0 !important;
 }
 
-/* ── App Grid ── */
+/* ================================================================
+   APP GRID (trang system)
+   ================================================================ */
 .app-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -129,7 +262,7 @@ div.document div.documentwrapper {
 
 .app-section-title {
   font-family: inherit !important;
-  font-size: 1.15rem !important;
+  font-size: 1.1rem !important;
   font-weight: 700 !important;
   color: var(--fontColor) !important;
   margin: 0 0 10px 0 !important;
@@ -151,7 +284,7 @@ div.document div.documentwrapper {
 
 .app-link-list li a {
   display: block;
-  padding: 4px 0;
+  padding: 5px 0;
   font-size: 0.92rem;
   color: #017E84 !important;
   text-decoration: none !important;
@@ -163,25 +296,52 @@ div.document div.documentwrapper {
   color: #014f52 !important;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .odoo-cards-wrap,
-  .app-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 960px) {
+  .odoo-cards-wrap { grid-template-columns: repeat(2, 1fr); }
+  .app-grid         { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 560px) {
-  .odoo-cards-wrap,
-  .app-grid {
-    grid-template-columns: 1fr;
-  }
-  .odoo-hero-title {
-    font-size: 2rem !important;
-  }
+  .odoo-cards-wrap { grid-template-columns: 1fr; }
+  .app-grid         { grid-template-columns: 1fr; }
+  .odoo-hero-title  { font-size: 2rem !important; }
 }
 
-/* ── Dark mode ── */
+/* ================================================================
+   DARK MODE
+   ================================================================ */
+:root[data-mode=dark] #sidebar,
+:root[data-mode=darkest] #sidebar {
+  background: #1c1820 !important;
+  border-right-color: rgba(255,255,255,0.07) !important;
+}
+
+:root[data-mode=dark] .sphinxsidebarwrapper p.caption:not(:first-of-type),
+:root[data-mode=darkest] .sphinxsidebarwrapper p.caption:not(:first-of-type) {
+  border-top-color: rgba(255,255,255,0.07) !important;
+}
+
+:root[data-mode=dark] .sphinxsidebarwrapper ul li a,
+:root[data-mode=darkest] .sphinxsidebarwrapper ul li a {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+:root[data-mode=dark] .sphinxsidebarwrapper ul li a:hover,
+:root[data-mode=darkest] .sphinxsidebarwrapper ul li a:hover {
+  background: rgba(113,75,103,0.2) !important;
+  color: #d4b0c8 !important;
+}
+
+:root[data-mode=dark] .sphinxsidebarwrapper ul li.current > a,
+:root[data-mode=darkest] .sphinxsidebarwrapper ul li.current > a {
+  background: rgba(113,75,103,0.28) !important;
+  color: #e2c8d8 !important;
+  border-left-color: #9C6E8A !important;
+}
+
 :root[data-mode=dark] .odoo-hero,
 :root[data-mode=darkest] .odoo-hero {
   background: #4a2d45;
@@ -206,4 +366,14 @@ div.document div.documentwrapper {
 :root[data-mode=dark] .app-link-list li a,
 :root[data-mode=darkest] .app-link-list li a {
   color: #26A69A !important;
+}
+
+:root[data-mode=dark] .sb-cap-icon svg path,
+:root[data-mode=dark] .sb-cap-icon svg rect,
+:root[data-mode=dark] .sb-cap-icon svg circle,
+:root[data-mode=darkest] .sb-cap-icon svg path,
+:root[data-mode=darkest] .sb-cap-icon svg rect,
+:root[data-mode=darkest] .sb-cap-icon svg circle {
+  fill: #9C6E8A !important;
+  stroke: #9C6E8A !important;
 }
