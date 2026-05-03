@@ -1,5 +1,5 @@
-.. meta::
-   :title: Tài liệu trung tâm CNTT
+Tài liệu trung tâm CNTT
+=======================
 
 .. raw:: html
    <div class="odoo-hero">
