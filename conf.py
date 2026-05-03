@@ -27,6 +27,7 @@ html_theme_options = {
     "show_theme_credit": False,
     "banner_text": False,
 }
+sidebars = {"**": ["globaltoc.html"]}
 html_title = "Tài liệu TT - ITC"
 
 # Build cảnh báo nghiêm khắc (optional)

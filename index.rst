@@ -36,5 +36,11 @@ ITC — Tài liệu Trung tâm
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
-   :caption: Các hệ thống:
+   :maxdepth: 4
+   
+   system/index
+   system/cos/index
+   system/pcs/index
+   system/scs/index
+   system/ecommerce/index
+   system/internal_system/index
