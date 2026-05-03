@@ -10,7 +10,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
      <div class="app-section">
        <h2 class="app-section-title">COS — Core Systems</h2>
        <ul class="app-link-list">
-         <li><a href="../cos/crm/index.html">CRM</a></li>
+         <li><a href="../system/cos/crm/index.html">CRM</a></li>
          <li><a href="../cos/apm/index.html">APM</a></li>
          <li><a href="../cos/hrm/index.html">HRM</a></li>
          <li><a href="../cos/accounting/index.html">Accounting</a></li>
@@ -72,8 +72,7 @@ Tài liệu đầy đủ cho từng hệ thống, bao gồm Business spec và Te
 
 .. toctree::
   :hidden:
+  :caption: Hệ thống COS
   :maxdepth: 3
-  :caption: ⚙️ Architect
 
-  ../architect/index
   cos/index

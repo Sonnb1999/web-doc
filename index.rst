@@ -34,21 +34,35 @@
 .. toctree::
    :hidden:
    :caption: Kiến trúc & Nghiệp vụ
-   :maxdepth: 4
+   :maxdepth: 1
 
    root/architect/index
 
 .. toctree::
    :hidden:
+   :includehidden:
+   :caption: Business
+   :maxdepth: 1
+
+   root/business/index
+
+.. toctree::
+   :hidden:
    :caption: Core Systems
-   :maxdepth: 4
+   :maxdepth: 1
 
    root/system/index
-   root/system/cos/index
+
+.. toctree::
+   :hidden:
+   :caption: Process
+   :maxdepth: 1
+
+   root/process/index
 
 .. toctree::
    :hidden:
    :caption: E-Teaching & E-Commerce
-   :maxdepth: 4
+   :maxdepth: 1
 
    sphinx/index

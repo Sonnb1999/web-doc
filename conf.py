@@ -21,5 +21,14 @@ html_theme_options = {
 }
 html_title = "Tài liệu TT - ITC"
 
+# Hiển thị global TOC ở sidebar trên mọi trang
+html_sidebars = {
+    "**": ["globaltoc.html"],
+}
+
 # Build cảnh báo nghiêm khắc (optional)
 nitpicky = False
+
+exclude_patterns = [
+    ".claude",
+]
