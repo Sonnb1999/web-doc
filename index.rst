@@ -48,7 +48,7 @@
 
 .. toctree::
    :hidden:
-   :caption: Core Systems
+   :caption: Systems
    :maxdepth: 1
 
    root/system/index
@@ -62,7 +62,7 @@
 
 .. toctree::
    :hidden:
-   :caption: E-Teaching & E-Commerce
+   :caption: Sphinx
    :maxdepth: 1
 
    sphinx/index
