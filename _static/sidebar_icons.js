@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ── Icon SVG map — key phải khớp chính xác với :caption: trong index.rst ── */
   const iconMap = {
-    "Kiến trúc & Nghiệp vụ": `
+    "Kiến trúc": `
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 21h18M5 21V10l7-7 7 7v11" stroke="#714B67" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <rect x="9" y="14" width="6" height="7" rx="1" fill="#714B67" opacity=".4"/>
       </svg>`,
 
-    "Systems": `
+    "Hệ thống": `
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="3" y="3" width="8" height="8" rx="1.5" fill="#714B67"/>
         <rect x="13" y="3" width="8" height="8" rx="1.5" fill="#714B67" opacity=".5"/>
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <rect x="13" y="13" width="8" height="8" rx="1.5" fill="#714B67" opacity=".3"/>
       </svg>`,
 
-    "Process": `
+    "Quy trình": `
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="9" cy="7" r="4" fill="#714B67"/>
         <circle cx="17" cy="9" r="3" fill="#714B67" opacity=".5"/>
@@ -30,14 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <path d="M16 14.5c2.5.5 5 2 5 5.5" stroke="#714B67" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
       </svg>`,
 
-    // "Marketing Systems": `
-    //   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //     <path d="M3 12h3M5.5 6.5l2 2M5.5 17.5l2-2" stroke="#714B67" stroke-width="1.8" stroke-linecap="round"/>
-    //     <path d="M8 8v8l11 3V5L8 8z" fill="#714B67" opacity=".5"/>
-    //     <circle cx="19" cy="19" r="3" fill="#714B67" opacity=".3"/>
-    //   </svg>`,
+    "Nghiệp vụ chung": `
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12h3M5.5 6.5l2 2M5.5 17.5l2-2" stroke="#714B67" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M8 8v8l11 3V5L8 8z" fill="#714B67" opacity=".5"/>
+        <circle cx="19" cy="19" r="3" fill="#714B67" opacity=".3"/>
+      </svg>`,
 
-    "Business": `
+    "Sphinx": `
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="4" width="20" height="13" rx="2" fill="#714B67" opacity=".2"/>
         <rect x="2" y="4" width="20" height="13" rx="2" stroke="#714B67" stroke-width="1.5"/>
