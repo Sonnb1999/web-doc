@@ -10,57 +10,57 @@ Tài liệu trung tâm CNTT
 
      <a class="odoo-card" href="root/architect/index.html">
        <span class="odoo-card-icon">🏗️</span>
-       <h2 class="odoo-card-title">Architect</h2>
-       <p class="odoo-card-desc">Kiến trúc tổng thể, sơ đồ thành phần và các quyết định thiết kế kỹ thuật.</p>
+       <h2 class="odoo-card-title">Kiến trúc</h2>
+       <p class="odoo-card-desc">Chứa các tài liệu về kiến trúc tổng thể về mặt kỹ thuật và các sơ đồ kết nối trong hệ sinh thái của trung tâm</p>
      </a>
 
      <a class="odoo-card" href="root/business/index.html">
        <span class="odoo-card-icon">💼</span>
-       <h2 class="odoo-card-title">Business</h2>
-       <p class="odoo-card-desc">Nghiệp vụ chung, quy tắc kinh doanh và các domain chức năng.</p>
+       <h2 class="odoo-card-title">Nghiệp vụ chung</h2>
+       <p class="odoo-card-desc">Tài liệu mô tả các nghiệp vụ tổng quan của toàn công ty</p>
      </a>
 
      <a class="odoo-card" href="root/process/index.html">
        <span class="odoo-card-icon">🔄</span>
-       <h2 class="odoo-card-title">Process</h2>
-       <p class="odoo-card-desc">Quy trình vận hành, workflow và standard operating procedures.</p>
+       <h2 class="odoo-card-title">Quy trình</h2>
+       <p class="odoo-card-desc">Tập hợp toàn bộ các quy trình nghiệp vụ và quy trình vận hành của trung tâm</p>
      </a>
 
      <a class="odoo-card" href="root/system/index.html">
        <span class="odoo-card-icon">⚙️</span>
-       <h2 class="odoo-card-title">System</h2>
-       <p class="odoo-card-desc">Tài liệu hệ thống đầy đủ — Business spec và Technical spec.</p>
+       <h2 class="odoo-card-title">Hệ thống</h2>
+       <p class="odoo-card-desc">Tài liệu liên quan đến các hệ thống phần mềm của trung tâm</p>
      </a>
    </div>
 
 .. toctree::
    :hidden:
-   :caption: Kiến trúc & Nghiệp vụ
+   :caption: Kiến trúc
    :maxdepth: 1
 
    root/architect/index
 
 .. toctree::
    :hidden:
-   :includehidden:
-   :caption: Business
-   :maxdepth: 1
-
-   root/business/index
-
-.. toctree::
-   :hidden:
-   :caption: Systems
+   :caption: Hệ thống
    :maxdepth: 1
 
    root/system/index
 
 .. toctree::
    :hidden:
-   :caption: Process
+   :caption: Quy trình
    :maxdepth: 1
 
    root/process/index
+
+.. toctree::
+   :hidden:
+   :includehidden:
+   :caption: Nghiệp vụ chung
+   :maxdepth: 1
+
+   root/business/index
 
 .. toctree::
    :hidden:

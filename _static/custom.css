@@ -567,3 +567,84 @@ div.document div.documentwrapper {
   fill: #9C6E8A !important;
   stroke: #9C6E8A !important;
 }
+
+/* ================================================================
+   DARK MODE — Process grid (process_cusstom.css classes)
+   ================================================================ */
+:root[data-mode=dark] .process-card,
+:root[data-mode=darkest] .process-card {
+  background: #1e1a22 !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+:root[data-mode=dark] .process-card h2,
+:root[data-mode=darkest] .process-card h2 {
+  color: rgba(255,255,255,0.9) !important;
+}
+:root[data-mode=dark] .process-card p,
+:root[data-mode=darkest] .process-card p {
+  color: rgba(255,255,255,0.5) !important;
+}
+:root[data-mode=dark] .process-number,
+:root[data-mode=darkest] .process-number {
+  background: rgba(255,255,255,0.08) !important;
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* ================================================================
+   RESPONSIVE — Mobile & Tablet
+   ================================================================ */
+
+/* Tablet: 601–900px — thu sidebar trái, ẩn sidebar phải */
+@media (max-width: 900px) {
+  div.sphinxsidebar {
+    transform: translateX(-17rem) !important;
+  }
+  div.document {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  div.button_nav_wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #right_sidebar {
+    transform: translateX(18rem) !important;
+  }
+  /* Trang home */
+  body.home-page div.documentwrapper {
+    padding: 0 1.5rem !important;
+  }
+  /* Hero */
+  .odoo-hero {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 36px 1.5rem 32px;
+  }
+}
+
+/* Mobile: ≤600px */
+@media (max-width: 600px) {
+  /* Hero */
+  .odoo-hero {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 28px 1rem 24px;
+  }
+  .odoo-hero-title { font-size: 2rem !important; }
+
+  /* Cards trang chủ */
+  .odoo-cards-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+  .odoo-card { padding: 20px 18px; }
+
+  /* App grid */
+  .app-grid { grid-template-columns: 1fr !important; }
+
+  /* Trang home */
+  body.home-page div.documentwrapper {
+    padding: 0 1rem !important;
+  }
+}

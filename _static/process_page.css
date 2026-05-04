@@ -1,0 +1,376 @@
+/* ── Shared styles for process detail pages (QT02, QT03, …) ── */
+
+/* Metadata card */
+.proc-meta-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  font-size: 13.5px;
+}
+.proc-meta-row {
+  display: flex;
+  border-bottom: 1px solid #f0f2f5;
+}
+.proc-meta-row:last-child { border-bottom: none; }
+.proc-meta-label {
+  width: 130px;
+  flex-shrink: 0;
+  padding: 10px 14px;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+  font-size: 12.5px;
+  border-right: 1px solid #e2e8f0;
+}
+.proc-meta-val {
+  padding: 10px 16px;
+  color: #374151;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 32px;
+  align-items: center;
+}
+.proc-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #374151;
+}
+.proc-meta-chip strong { color: #111827; }
+
+/* Notice / highlight box */
+.proc-notice {
+  margin-bottom: 28px;
+  padding: 10px 16px;
+  border-left: 4px solid #8b5cf6;
+  background: #f5f3ff;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: #374151;
+}
+.proc-notice .notice-title {
+  font-weight: 700;
+  color: #5b21b6;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 4px;
+}
+
+/* Section title */
+.proc-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Reference table */
+.proc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin-bottom: 32px;
+}
+.proc-table th {
+  background: #f1f5f9;
+  padding: 9px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border: 1px solid #e2e8f0;
+}
+.proc-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  color: #374151;
+  vertical-align: top;
+}
+.proc-table tr:nth-child(even) td { background: #fafafa; }
+
+/* Owner badges */
+.proc-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.bg-auto  { background: #dbeafe; color: #1e40af; }
+.bg-ba    { background: #ede9fe; color: #5b21b6; }
+.bg-lead  { background: #d1fae5; color: #065f46; }
+.bg-dev   { background: #fee2e2; color: #991b1b; }
+.bg-cus   { background: #fef3c7; color: #92400e; }
+
+/* Stage-card grid */
+.proc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+@media (max-width: 1100px) { .proc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px)  { .proc-grid { grid-template-columns: 1fr; } }
+
+/* Stage card */
+.sc {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+.sc:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(15,23,42,0.09); }
+
+/* Hover tints per lane */
+.sc-auto:hover  { background: #eef4fd; border-color: #bfdbfe; }
+.sc-ba:hover    { background: #f5f0fd; border-color: #ddd6fe; }
+.sc-lead:hover  { background: #edfaf4; border-color: #a7f3d0; }
+.sc-dev:hover   { background: #fef2f2; border-color: #fecaca; }
+.sc-cus:hover   { background: #fffbeb; border-color: #fde68a; }
+
+/* Card header */
+.sc-header {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: border-color 0.35s ease;
+}
+.sc:hover .sc-header { border-color: transparent; }
+.sc-header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+
+/* Stage number badge */
+.sc-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: background 0.35s ease;
+}
+.sc-auto  .sc-num { background: #dbeafe; color: #1e40af; }
+.sc-ba    .sc-num { background: #ede9fe; color: #5b21b6; }
+.sc-lead  .sc-num { background: #d1fae5; color: #065f46; }
+.sc-dev   .sc-num { background: #fee2e2; color: #991b1b; }
+.sc-cus   .sc-num { background: #fef3c7; color: #92400e; }
+.sc-auto:hover  .sc-num { background: #bfdbfe; }
+.sc-ba:hover    .sc-num { background: #ddd6fe; }
+.sc-lead:hover  .sc-num { background: #6ee7b7; }
+.sc-dev:hover   .sc-num { background: #fca5a5; }
+.sc-cus:hover   .sc-num { background: #fde68a; }
+
+.sc-title { font-size: 14px; font-weight: 700; color: #111827; line-height: 1.3; }
+.sc-sub   { font-size: 12px; color: #6b7280; margin-top: 2px; }
+
+/* Card stats row */
+.sc-stats {
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: border-color 0.35s ease;
+}
+.sc:hover .sc-stats { border-color: transparent; }
+
+/* Card body */
+.sc-body { padding: 10px 16px 14px; }
+
+/* Generic label/value pair */
+.sc-row   { display: flex; flex-direction: column; gap: 1px; }
+.sc-lbl   { font-size: 10.5px; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: .04em; }
+.sc-val   { font-size: 12.5px; color: #374151; }
+
+/* IO lists */
+.sc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sc-list li {
+  font-size: 12px;
+  color: #4b5563;
+  padding-left: 12px;
+  position: relative;
+}
+.sc-list li::before { content: "›"; position: absolute; left: 0; color: #9ca3af; font-weight: 700; }
+
+/* Exit criteria box */
+.sc-exit {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-radius: 7px;
+  font-size: 12px;
+  color: #374151;
+  transition: background 0.35s ease;
+}
+.sc:hover .sc-exit { background: rgba(255,255,255,0.6); }
+.sc-exit .sc-lbl { margin-bottom: 3px; }
+
+/* Warning strip */
+.sc-warn {
+  margin-top: 6px;
+  padding: 7px 10px;
+  background: #fffbeb;
+  border-left: 3px solid #fbbf24;
+  border-radius: 0 6px 6px 0;
+  font-size: 11.5px;
+  color: #78350f;
+  transition: background 0.35s ease;
+}
+.sc:hover .sc-warn { background: rgba(255,251,235,0.5); }
+
+/* ================================================================
+   DARK MODE
+   ================================================================ */
+
+/* Metadata card */
+:root[data-mode=dark] .proc-meta-card,
+:root[data-mode=darkest] .proc-meta-card {
+  border-color: rgba(255,255,255,0.1);
+}
+:root[data-mode=dark] .proc-meta-row,
+:root[data-mode=darkest] .proc-meta-row {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+:root[data-mode=dark] .proc-meta-label,
+:root[data-mode=darkest] .proc-meta-label {
+  background: rgba(255,255,255,0.05);
+  border-right-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.55);
+}
+:root[data-mode=dark] .proc-meta-val,
+:root[data-mode=darkest] .proc-meta-val {
+  color: rgba(255,255,255,0.8);
+}
+:root[data-mode=dark] .proc-meta-chip strong,
+:root[data-mode=darkest] .proc-meta-chip strong {
+  color: #fff;
+}
+
+/* Notice box */
+:root[data-mode=dark] .proc-notice,
+:root[data-mode=darkest] .proc-notice {
+  background: rgba(139,92,246,0.12);
+  border-left-color: #7c3aed;
+  color: rgba(255,255,255,0.75);
+}
+:root[data-mode=dark] .proc-notice .notice-title,
+:root[data-mode=darkest] .proc-notice .notice-title {
+  color: #a78bfa;
+}
+
+/* Section title */
+:root[data-mode=dark] .proc-section-title,
+:root[data-mode=darkest] .proc-section-title {
+  color: rgba(255,255,255,0.88);
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+
+/* Table */
+:root[data-mode=dark] .proc-table th,
+:root[data-mode=darkest] .proc-table th {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.65);
+  border-color: rgba(255,255,255,0.1);
+}
+:root[data-mode=dark] .proc-table td,
+:root[data-mode=darkest] .proc-table td {
+  border-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75);
+}
+:root[data-mode=dark] .proc-table tr:nth-child(even) td,
+:root[data-mode=darkest] .proc-table tr:nth-child(even) td {
+  background: rgba(255,255,255,0.03);
+}
+
+/* Badges — soften in dark mode */
+:root[data-mode=dark] .bg-auto,  :root[data-mode=darkest] .bg-auto  { background: rgba(59,130,246,0.2);  color: #93c5fd; }
+:root[data-mode=dark] .bg-ba,    :root[data-mode=darkest] .bg-ba    { background: rgba(139,92,246,0.2);  color: #c4b5fd; }
+:root[data-mode=dark] .bg-lead,  :root[data-mode=darkest] .bg-lead  { background: rgba(16,185,129,0.2);  color: #6ee7b7; }
+:root[data-mode=dark] .bg-dev,   :root[data-mode=darkest] .bg-dev   { background: rgba(239,68,68,0.2);   color: #fca5a5; }
+:root[data-mode=dark] .bg-cus,   :root[data-mode=darkest] .bg-cus   { background: rgba(245,158,11,0.2);  color: #fde68a; }
+
+/* Stage cards */
+:root[data-mode=dark] .sc,
+:root[data-mode=darkest] .sc {
+  background: #1e1a22;
+  border-color: rgba(255,255,255,0.1);
+}
+:root[data-mode=dark] .sc-header,
+:root[data-mode=darkest] .sc-header {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+:root[data-mode=dark] .sc-title,
+:root[data-mode=darkest] .sc-title {
+  color: rgba(255,255,255,0.9);
+}
+:root[data-mode=dark] .sc-sub,
+:root[data-mode=darkest] .sc-sub {
+  color: rgba(255,255,255,0.42);
+}
+:root[data-mode=dark] .sc-stats,
+:root[data-mode=darkest] .sc-stats {
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+:root[data-mode=dark] .sc-lbl,
+:root[data-mode=darkest] .sc-lbl {
+  color: rgba(255,255,255,0.32);
+}
+:root[data-mode=dark] .sc-val,
+:root[data-mode=darkest] .sc-val {
+  color: rgba(255,255,255,0.68);
+}
+:root[data-mode=dark] .sc-list li,
+:root[data-mode=darkest] .sc-list li {
+  color: rgba(255,255,255,0.62);
+}
+:root[data-mode=dark] .sc-list li::before,
+:root[data-mode=darkest] .sc-list li::before {
+  color: rgba(255,255,255,0.25);
+}
+:root[data-mode=dark] .sc-exit,
+:root[data-mode=darkest] .sc-exit {
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.68);
+}
+:root[data-mode=dark] .sc:hover .sc-exit,
+:root[data-mode=darkest] .sc:hover .sc-exit {
+  background: rgba(255,255,255,0.06);
+}
+:root[data-mode=dark] .sc-warn,
+:root[data-mode=darkest] .sc-warn {
+  background: rgba(251,191,36,0.1);
+  border-left-color: #d97706;
+  color: #fde68a;
+}
+:root[data-mode=dark] .sc:hover .sc-warn,
+:root[data-mode=darkest] .sc:hover .sc-warn {
+  background: rgba(251,191,36,0.14);
+}
+
+/* Stage num badge dark mode colors */
+:root[data-mode=dark] .sc-auto  .sc-num, :root[data-mode=darkest] .sc-auto  .sc-num { background: rgba(59,130,246,0.2);  color: #93c5fd; }
+:root[data-mode=dark] .sc-ba    .sc-num, :root[data-mode=darkest] .sc-ba    .sc-num { background: rgba(139,92,246,0.2);  color: #c4b5fd; }
+:root[data-mode=dark] .sc-lead  .sc-num, :root[data-mode=darkest] .sc-lead  .sc-num { background: rgba(16,185,129,0.2);  color: #6ee7b7; }
+:root[data-mode=dark] .sc-dev   .sc-num, :root[data-mode=darkest] .sc-dev   .sc-num { background: rgba(239,68,68,0.2);   color: #fca5a5; }
+:root[data-mode=dark] .sc-cus   .sc-num, :root[data-mode=darkest] .sc-cus   .sc-num { background: rgba(245,158,11,0.2);  color: #fde68a; }
+
+/* Hover tints dark mode */
+:root[data-mode=dark] .sc-auto:hover,  :root[data-mode=darkest] .sc-auto:hover  { background: #1a2535; border-color: rgba(59,130,246,0.35); }
+:root[data-mode=dark] .sc-ba:hover,    :root[data-mode=darkest] .sc-ba:hover    { background: #201a2c; border-color: rgba(139,92,246,0.35); }
+:root[data-mode=dark] .sc-lead:hover,  :root[data-mode=darkest] .sc-lead:hover  { background: #162420; border-color: rgba(16,185,129,0.35); }
+:root[data-mode=dark] .sc-dev:hover,   :root[data-mode=darkest] .sc-dev:hover   { background: #261515; border-color: rgba(239,68,68,0.35); }
+:root[data-mode=dark] .sc-cus:hover,   :root[data-mode=darkest] .sc-cus:hover   { background: #261e0d; border-color: rgba(245,158,11,0.35); }
