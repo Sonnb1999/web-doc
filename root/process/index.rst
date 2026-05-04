@@ -59,5 +59,11 @@ Tài liệu đầy đủ cho các quy trình được ban hành của nội bộ
   :hidden:
   :maxdepth: 5
 
+  process_00/index
   process_01/index
   process_02/index
+  process_03/index
+  process_04/index
+  process_05/index
+  process_06/index
+  process_07/index

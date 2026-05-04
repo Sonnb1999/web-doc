@@ -231,3 +231,146 @@
   transition: background 0.35s ease;
 }
 .sc:hover .sc-warn { background: rgba(255,251,235,0.5); }
+
+/* ================================================================
+   DARK MODE
+   ================================================================ */
+
+/* Metadata card */
+:root[data-mode=dark] .proc-meta-card,
+:root[data-mode=darkest] .proc-meta-card {
+  border-color: rgba(255,255,255,0.1);
+}
+:root[data-mode=dark] .proc-meta-row,
+:root[data-mode=darkest] .proc-meta-row {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+:root[data-mode=dark] .proc-meta-label,
+:root[data-mode=darkest] .proc-meta-label {
+  background: rgba(255,255,255,0.05);
+  border-right-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.55);
+}
+:root[data-mode=dark] .proc-meta-val,
+:root[data-mode=darkest] .proc-meta-val {
+  color: rgba(255,255,255,0.8);
+}
+:root[data-mode=dark] .proc-meta-chip strong,
+:root[data-mode=darkest] .proc-meta-chip strong {
+  color: #fff;
+}
+
+/* Notice box */
+:root[data-mode=dark] .proc-notice,
+:root[data-mode=darkest] .proc-notice {
+  background: rgba(139,92,246,0.12);
+  border-left-color: #7c3aed;
+  color: rgba(255,255,255,0.75);
+}
+:root[data-mode=dark] .proc-notice .notice-title,
+:root[data-mode=darkest] .proc-notice .notice-title {
+  color: #a78bfa;
+}
+
+/* Section title */
+:root[data-mode=dark] .proc-section-title,
+:root[data-mode=darkest] .proc-section-title {
+  color: rgba(255,255,255,0.88);
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+
+/* Table */
+:root[data-mode=dark] .proc-table th,
+:root[data-mode=darkest] .proc-table th {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.65);
+  border-color: rgba(255,255,255,0.1);
+}
+:root[data-mode=dark] .proc-table td,
+:root[data-mode=darkest] .proc-table td {
+  border-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75);
+}
+:root[data-mode=dark] .proc-table tr:nth-child(even) td,
+:root[data-mode=darkest] .proc-table tr:nth-child(even) td {
+  background: rgba(255,255,255,0.03);
+}
+
+/* Badges — soften in dark mode */
+:root[data-mode=dark] .bg-auto,  :root[data-mode=darkest] .bg-auto  { background: rgba(59,130,246,0.2);  color: #93c5fd; }
+:root[data-mode=dark] .bg-ba,    :root[data-mode=darkest] .bg-ba    { background: rgba(139,92,246,0.2);  color: #c4b5fd; }
+:root[data-mode=dark] .bg-lead,  :root[data-mode=darkest] .bg-lead  { background: rgba(16,185,129,0.2);  color: #6ee7b7; }
+:root[data-mode=dark] .bg-dev,   :root[data-mode=darkest] .bg-dev   { background: rgba(239,68,68,0.2);   color: #fca5a5; }
+:root[data-mode=dark] .bg-cus,   :root[data-mode=darkest] .bg-cus   { background: rgba(245,158,11,0.2);  color: #fde68a; }
+
+/* Stage cards */
+:root[data-mode=dark] .sc,
+:root[data-mode=darkest] .sc {
+  background: #1e1a22;
+  border-color: rgba(255,255,255,0.1);
+}
+:root[data-mode=dark] .sc-header,
+:root[data-mode=darkest] .sc-header {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+:root[data-mode=dark] .sc-title,
+:root[data-mode=darkest] .sc-title {
+  color: rgba(255,255,255,0.9);
+}
+:root[data-mode=dark] .sc-sub,
+:root[data-mode=darkest] .sc-sub {
+  color: rgba(255,255,255,0.42);
+}
+:root[data-mode=dark] .sc-stats,
+:root[data-mode=darkest] .sc-stats {
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+:root[data-mode=dark] .sc-lbl,
+:root[data-mode=darkest] .sc-lbl {
+  color: rgba(255,255,255,0.32);
+}
+:root[data-mode=dark] .sc-val,
+:root[data-mode=darkest] .sc-val {
+  color: rgba(255,255,255,0.68);
+}
+:root[data-mode=dark] .sc-list li,
+:root[data-mode=darkest] .sc-list li {
+  color: rgba(255,255,255,0.62);
+}
+:root[data-mode=dark] .sc-list li::before,
+:root[data-mode=darkest] .sc-list li::before {
+  color: rgba(255,255,255,0.25);
+}
+:root[data-mode=dark] .sc-exit,
+:root[data-mode=darkest] .sc-exit {
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.68);
+}
+:root[data-mode=dark] .sc:hover .sc-exit,
+:root[data-mode=darkest] .sc:hover .sc-exit {
+  background: rgba(255,255,255,0.06);
+}
+:root[data-mode=dark] .sc-warn,
+:root[data-mode=darkest] .sc-warn {
+  background: rgba(251,191,36,0.1);
+  border-left-color: #d97706;
+  color: #fde68a;
+}
+:root[data-mode=dark] .sc:hover .sc-warn,
+:root[data-mode=darkest] .sc:hover .sc-warn {
+  background: rgba(251,191,36,0.14);
+}
+
+/* Stage num badge dark mode colors */
+:root[data-mode=dark] .sc-auto  .sc-num, :root[data-mode=darkest] .sc-auto  .sc-num { background: rgba(59,130,246,0.2);  color: #93c5fd; }
+:root[data-mode=dark] .sc-ba    .sc-num, :root[data-mode=darkest] .sc-ba    .sc-num { background: rgba(139,92,246,0.2);  color: #c4b5fd; }
+:root[data-mode=dark] .sc-lead  .sc-num, :root[data-mode=darkest] .sc-lead  .sc-num { background: rgba(16,185,129,0.2);  color: #6ee7b7; }
+:root[data-mode=dark] .sc-dev   .sc-num, :root[data-mode=darkest] .sc-dev   .sc-num { background: rgba(239,68,68,0.2);   color: #fca5a5; }
+:root[data-mode=dark] .sc-cus   .sc-num, :root[data-mode=darkest] .sc-cus   .sc-num { background: rgba(245,158,11,0.2);  color: #fde68a; }
+
+/* Hover tints dark mode */
+:root[data-mode=dark] .sc-auto:hover,  :root[data-mode=darkest] .sc-auto:hover  { background: #1a2535; border-color: rgba(59,130,246,0.35); }
+:root[data-mode=dark] .sc-ba:hover,    :root[data-mode=darkest] .sc-ba:hover    { background: #201a2c; border-color: rgba(139,92,246,0.35); }
+:root[data-mode=dark] .sc-lead:hover,  :root[data-mode=darkest] .sc-lead:hover  { background: #162420; border-color: rgba(16,185,129,0.35); }
+:root[data-mode=dark] .sc-dev:hover,   :root[data-mode=darkest] .sc-dev:hover   { background: #261515; border-color: rgba(239,68,68,0.35); }
+:root[data-mode=dark] .sc-cus:hover,   :root[data-mode=darkest] .sc-cus:hover   { background: #261e0d; border-color: rgba(245,158,11,0.35); }
