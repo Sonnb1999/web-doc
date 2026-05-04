@@ -18,7 +18,7 @@ Tài liệu đầy đủ cho các quy trình được ban hành của nội bộ
             <p>Lập kế hoạch triển khai, phân bổ nguồn lực, giám sát tiến độ và kiểm soát chất lượng dự án.</p>
         </a>
 
-        <a class="process-card" href="">
+        <a class="process-card" href="../process/process_02/index.html">
             <span class="process-number">QT02</span>
             <h2>QT02 - Helpdesk — Giao tiếp một cửa</h2>
             <p>Tiếp nhận yêu cầu tập trung, xác minh thông tin và điều phối xử lý đến đúng bộ phận phụ trách.</p>
