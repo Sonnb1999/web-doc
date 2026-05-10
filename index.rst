@@ -31,6 +31,12 @@ Tài liệu trung tâm CNTT
        <h2 class="odoo-card-title">Hệ thống</h2>
        <p class="odoo-card-desc">Tài liệu liên quan đến các hệ thống phần mềm của trung tâm</p>
      </a>
+
+     <a class="odoo-card" href="root/guide/index.html">
+       <span class="odoo-card-icon">📖</span>
+       <h2 class="odoo-card-title">Hướng dẫn</h2>
+       <p class="odoo-card-desc">Hướng dẫn nhân sự đóng góp tài liệu: cấu trúc thư mục, template và chuẩn định dạng</p>
+     </a>
    </div>
 
 .. toctree::
@@ -61,6 +67,13 @@ Tài liệu trung tâm CNTT
    :maxdepth: 1
 
    root/business/index
+
+.. toctree::
+   :hidden:
+   :caption: Hướng dẫn
+   :maxdepth: 2
+
+   root/guide/index
 
 .. toctree::
    :hidden:

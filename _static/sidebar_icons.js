@@ -37,6 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <circle cx="19" cy="19" r="3" fill="#714B67" opacity=".3"/>
       </svg>`,
 
+    "Hướng dẫn": `
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#714B67" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="#714B67" opacity=".2" stroke="#714B67" stroke-width="1.5"/>
+        <path d="M9 7h6M9 11h4" stroke="#714B67" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>`,
+
     "Sphinx": `
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="4" width="20" height="13" rx="2" fill="#714B67" opacity=".2"/>
